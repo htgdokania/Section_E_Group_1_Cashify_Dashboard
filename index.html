@@ -13,47 +13,56 @@
   --sh:0 4px 24px rgba(0,122,110,.18);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
-.hdr{background:linear-gradient(135deg,#071F1C,#00524A 55%,#007A6E);padding:19px 34px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 4px 24px rgba(26,61,56,.32);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;}
+.hdr{background:linear-gradient(135deg,#071F1C,#00524A 55%,#007A6E);padding:0;position:sticky;top:0;z-index:200;box-shadow:0 4px 24px rgba(26,61,56,.32);}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;padding:10px 34px;}
 .hdr-l{display:flex;align-items:center;gap:15px;}
-.logo-w{background:rgba(255,255,255,.14);border-radius:11px;padding:7px 14px;backdrop-filter:blur(8px);}
+.logo-w{background:rgba(255,255,255,.14);border-radius:4px;padding:7px 14px;backdrop-filter:blur(8px);}
 .logo-t{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:2px;}
 .logo-s{font-size:10px;color:rgba(255,255,255,.6);letter-spacing:3px;text-transform:uppercase;}
-.hdr-ti{color:#fff;font-family:'Playfair Display',serif;font-size:19px;font-weight:600;}
-.hdr-su{font-size:11px;color:rgba(255,255,255,.80);letter-spacing:.8px;margin-top:1px;}
-.hs-wrap{display:flex;gap:26px;}
-.hs{text-align:center;}.hs-n{font-size:22px;font-weight:700;color:#ffffff;}.hs-l{font-size:9px;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:1px;}
-.fbar{background:#EAF4F2;border-bottom:2px solid #7ED5CE;padding:10px 34px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:sticky;top:79px;z-index:199;box-shadow:0 2px 10px rgba(45,138,62,.07);}
-.fl{font-size:11px;color:#003D38;text-transform:uppercase;letter-spacing:1px;font-weight:700;white-space:nowrap;}
-.jtog{display:flex;background:var(--bg);border-radius:26px;padding:3px;gap:2px;}
-.jb{padding:7px 18px;border-radius:8px;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;transition:all .25s;color:#003D38;background:transparent;}
-.jb.active{background:#005248;color:#fff;box-shadow:0 2px 10px rgba(0,82,74,.45);font-weight:700;}
+.hdr-ti{color:#fff;font-family:'Playfair Display',serif;font-size:22px;font-weight:700;letter-spacing:.3px;}
+.hdr-su{font-size:13px;color:rgba(255,255,255,.82);letter-spacing:.6px;margin-top:2px;}
+/* hdr-mid removed */
+.hs-wrap{display:flex;gap:32px;align-items:center;}
+.hs-divider{width:1px;height:28px;background:rgba(255,255,255,.2);}
+.hs{text-align:center;}.hs-n{font-size:22px;font-weight:700;color:#ffffff;line-height:1;}.hs-l{font-size:10px;color:rgba(255,255,255,.70);text-transform:uppercase;letter-spacing:.8px;margin-top:3px;}
+.fbar{background:#EAF4F2;border-bottom:2px solid #7ED5CE;padding:0 34px;position:sticky;top:58px;z-index:199;box-shadow:0 2px 10px rgba(45,138,62,.07);}
+.fbar-row{display:flex;align-items:center;gap:0;padding:7px 0;border-bottom:1px solid rgba(0,122,110,.10);}
+.fbar-row:last-child{border-bottom:none;}
+.fl{font-size:11px;color:#003D38;text-transform:uppercase;letter-spacing:.6px;font-weight:700;white-space:nowrap;min-width:60px;padding-right:10px;}
+.jtog{display:flex;background:rgba(0,82,74,.08);border-radius:3px;padding:2px;gap:2px;border:1px solid rgba(0,122,110,.25);}
+.jb{padding:4px 14px;border-radius:2px;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;transition:all .2s;color:#003D38;background:transparent;}
+.jb.active{background:#005248;color:#fff;font-weight:700;}
 .chips{display:flex;gap:6px;flex-wrap:wrap;}
-.chip{padding:6px 14px;border-radius:8px;border:1.5px solid var(--bdr);background:var(--bg);font-size:11px;cursor:pointer;transition:all .2s;color:#003D38;font-weight:500;}
+.chip{padding:4px 11px;border-radius:3px;border:1.5px solid var(--bdr);background:var(--bg);font-size:11px;cursor:pointer;transition:all .15s;color:#003D38;font-weight:500;}
+.chip:hover{border-color:#005248;background:rgba(0,82,74,.06);}
 .chip.active{border-color:#005248;background:rgba(0,82,74,.15);color:#003D38;font-weight:700;}
-.fsep{width:1px;height:24px;background:var(--bdr);}
-.tabs{background:#F5FAFA;padding:0 34px;border-bottom:2px solid #7ED5CE;display:flex;overflow-x:auto;}
-.tb{padding:13px 18px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:#003D38;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;}
+.fsep{display:none;}
+.btn-reset{margin-left:auto;padding:5px 13px;border-radius:3px;border:1.5px solid #C0391A;background:transparent;color:#C0391A;font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.3px;text-transform:uppercase;transition:all .15s;}
+.btn-reset:hover{background:#C0391A;color:#fff;}
+.fbarsep{width:1px;height:18px;background:rgba(0,122,110,.25);margin:0 14px;flex-shrink:0;}
+.tabs{background:#F5FAFA;padding:0 34px;border-bottom:2px solid #7ED5CE;display:flex;overflow-x:auto;position:sticky;top:var(--tabs-top,130px);z-index:198;}
+.tb{padding:13px 18px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#003D38;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;}
 .tb.active{color:#005C54;border-bottom-color:#005C54;font-weight:700;}
-.main{padding:26px 34px 80px 34px;max-width:1700px;margin:0 auto;}
+.main{padding:26px 34px 100px 34px;max-width:1700px;margin:0 auto;}
 .panel{display:none;}.panel.active{display:block;}
 .sh{margin-bottom:20px;}
-.st{font-family:'Playfair Display',serif;font-size:26px;color:#071F1C;font-weight:700;}
-.sd{font-size:13px;color:#1A4A44;margin-top:3px;line-height:1.6;font-weight:400;}
-.card{background:var(--card);border-radius:14px;padding:22px;box-shadow:0 2px 16px rgba(0,80,70,.10);border:1px solid #9ED0CA;}
-.ct{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#004E48;margin-bottom:15px;display:flex;align-items:center;gap:6px;}
+.st{font-family:'Playfair Display',serif;font-size:28px;color:#071F1C;font-weight:700;}
+.sd{font-size:15px;color:#1A4A44;margin-top:4px;line-height:1.6;font-weight:400;}
+.card{background:var(--card);border-radius:4px;padding:22px;box-shadow:0 2px 12px rgba(0,80,70,.08);border:1px solid #9ED0CA;}
+.ct{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#004E48;margin-bottom:15px;display:flex;align-items:center;gap:6px;}
 .dot{width:7px;height:7px;border-radius:50%;background:#007A6E;flex-shrink:0;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
 .full{grid-column:1/-1;}
 .sc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:24px;}
-.sc-c{background:var(--card);border-radius:14px;padding:17px;box-shadow:var(--sh);border:1px solid var(--bdr);text-align:center;position:relative;overflow:hidden;}
+.sc-c{background:var(--card);border-radius:4px;padding:17px;box-shadow:var(--sh);border:1px solid var(--bdr);text-align:center;position:relative;overflow:hidden;}
 .sc-c::before{content:'';position:absolute;top:-24px;right:-24px;width:64px;height:64px;border-radius:50%;background:var(--c3);opacity:.06;}
-.mi{font-size:19px;margin-bottom:5px;}
-.mv{font-family:'Playfair Display',serif;font-size:27px;font-weight:700;color:#004038;}
+.mi{font-size:22px;margin-bottom:6px;}
+.mv{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#004038;}
 .mv.neg{color:#007A6E;}.mv.pos{color:#1B7A3E;}
-.ml{font-size:10px;color:#003D38;text-transform:uppercase;letter-spacing:.8px;margin-top:2px;font-weight:500;}
-.mc{font-size:10px;color:#003D38;margin-top:4px;padding-top:4px;border-top:1px solid var(--bdr);}
+.ml{font-size:12px;color:#003D38;text-transform:uppercase;letter-spacing:.6px;margin-top:3px;font-weight:500;}
+.mc{font-size:12px;color:#003D38;margin-top:4px;padding-top:4px;border-top:1px solid var(--bdr);}
 /* funnel */
 .fn-wrap{display:flex;gap:24px;flex-wrap:wrap;}
 .fn-plat{flex:1;min-width:190px;}
@@ -61,74 +70,78 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .fn-steps{display:flex;flex-direction:column;align-items:center;gap:5px;}
 .fstep{width:100%;display:flex;flex-direction:column;align-items:center;gap:2px;}
 .fb-outer{width:100%;display:flex;justify-content:center;}
-.fb-inner{height:46px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;transition:all .28s;}
+.fb-inner{height:46px;border-radius:3px;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;transition:all .28s;}
 .fb-inner:hover{filter:brightness(1.07);transform:scaleX(1.015);}
 .fb-n{color:#fff;font-weight:700;font-size:14px;}
 .fb-p{color:rgba(255,255,255,.82);font-size:10px;}
 .fmeta{display:flex;align-items:center;gap:5px;}
 .flbl{font-size:10px;color:#1A4A44;font-weight:500;}
-.fconv{font-size:9px;color:#4CAF8A;background:rgba(76,175,138,.12);padding:1px 6px;border-radius:7px;font-weight:700;}
+.fconv{font-size:11px;color:#4CAF8A;background:rgba(76,175,138,.12);padding:2px 6px;border-radius:3px;font-weight:700;}
 .farr{color:var(--c4);font-size:14px;line-height:1;}
 .psel{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
-.psb{padding:6px 14px;border-radius:8px;border:1.5px solid var(--bdr);background:var(--bg);font-size:10px;cursor:pointer;transition:all .2s;color:#1A4A44;font-family:'Inter',sans-serif;}
+.psb{padding:7px 14px;border-radius:3px;border:1.5px solid var(--bdr);background:var(--bg);font-size:12px;cursor:pointer;transition:all .2s;color:#1A4A44;font-family:'Inter',sans-serif;}
 .psb.active{border-color:var(--c3);background:rgba(0,181,165,.1);color:var(--c3);font-weight:700;}
 .cw{position:relative;}
 .cw-220{height:220px;}.cw-280{height:280px;}.cw-320{height:320px;}.cw-380{height:380px;}.cw-430{height:430px;}
 .nps-g{text-align:center;padding:10px 0;}
 .nps-big{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:#004038;}
-.nps-sl{font-size:11px;color:#003D38;text-transform:uppercase;letter-spacing:1px;margin-top:1px;font-weight:500;}
-.nps-bar{height:13px;border-radius:6px;overflow:hidden;display:flex;margin:13px 0 5px;}
+.nps-sl{font-size:13px;color:#003D38;text-transform:uppercase;letter-spacing:.8px;margin-top:2px;font-weight:500;}
+.nps-bar{height:14px;border-radius:3px;overflow:hidden;display:flex;margin:13px 0 5px;}
 .nps-pr{background:#1B7A3A;}.nps-pa{background:#5A9A6A;}.nps-de{background:#C0391A;}
-.nps-leg{display:flex;justify-content:space-between;font-size:11px;color:#003D38;font-weight:500;}
+.nps-leg{display:flex;justify-content:space-between;font-size:13px;color:#003D38;font-weight:500;}
 .cb-row{margin-bottom:12px;}
-.cb-l{display:flex;justify-content:space-between;margin-bottom:3px;font-size:11px;}
-.cb-bar{display:flex;height:30px;border-radius:7px;overflow:hidden;}
+.cb-l{display:flex;justify-content:space-between;margin-bottom:3px;font-size:13px;}
+.cb-bar{display:flex;height:30px;border-radius:3px;overflow:hidden;}
 .cb-seg{display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;overflow:hidden;white-space:nowrap;transition:flex .4s;}
 .sri{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--bg);}
-.sr-rk{width:20px;height:20px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#1A4A44;flex-shrink:0;}
+.sr-rk{width:22px;height:22px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#1A4A44;flex-shrink:0;}
 .sr-rk.r1{background:var(--c3);color:#fff;}
-.sr-nm{flex:1;font-size:12px;font-weight:600;color:#0A1E1C;}
+.sr-nm{flex:1;font-size:14px;font-weight:600;color:#0A1E1C;}
 .sr-bg{flex:2;height:6px;background:var(--bg);border-radius:3px;overflow:hidden;}
 .sr-fi{height:100%;border-radius:3px;transition:width .6s;}
-.sr-pc{font-size:12px;font-weight:700;min-width:38px;text-align:right;color:#005248;}
-.hm-tbl{width:100%;border-collapse:collapse;font-size:11px;}
-.fn-tbl{width:100%;border-collapse:collapse;font-size:13px;}
-.fn-tbl th{background:var(--bg);padding:10px 14px;text-align:center;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.8px;color:#003D38;white-space:nowrap;}
+.sr-pc{font-size:14px;font-weight:700;min-width:38px;text-align:right;color:#005248;}
+.hm-tbl{width:100%;border-collapse:collapse;font-size:13px;}
+/* chart insight panel */
+.chart-insight{margin-top:14px;padding:12px 16px;background:rgba(0,90,80,.05);border-left:3px solid var(--c3);border-radius:0 4px 4px 0;font-size:13px;color:#1A3D38;line-height:1.65;}
+.chart-insight strong{color:#005248;font-weight:700;}
+.chart-insight .ci-label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;color:#007A6E;margin-bottom:4px;display:block;}
+.fn-tbl{width:100%;border-collapse:collapse;font-size:14px;}
+.fn-tbl th{background:var(--bg);padding:10px 14px;text-align:center;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.8px;color:#003D38;white-space:nowrap;}
 .fn-tbl th:first-child{text-align:left;}
 .fn-tbl td{padding:10px 14px;border-bottom:1px solid var(--bg);text-align:center;vertical-align:middle;}
 .fn-tbl td:first-child{text-align:left;}
 .fn-tbl tr:hover td{background:#f0fafa;}
 .fn-tbl .pn{display:flex;align-items:center;gap:8px;font-weight:600;font-size:12px;}
 .fn-tbl .pn-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
-.fn-tbl .val-big{font-weight:700;font-size:13px;color:var(--text);}
-.fn-tbl .val-n{font-size:10px;color:#1A4A44;display:block;margin-top:1px;}
-.fn-tbl .conv{font-weight:700;font-size:11px;}
+.fn-tbl .val-big{font-weight:700;font-size:15px;color:var(--text);}
+.fn-tbl .val-n{font-size:12px;color:#1A4A44;display:block;margin-top:1px;}
+.fn-tbl .conv{font-weight:700;font-size:13px;}
 .fn-tbl .conv.hi{color:#27AE60;}.fn-tbl .conv.mid{color:#E8591A;}.fn-tbl .conv.lo{color:#C0392B;}
-.fn-tbl .si-val{font-weight:800;font-size:14px;}
+.fn-tbl .si-val{font-weight:800;font-size:16px;}
 .fn-tbl .si-val.top{color:#E8591A;}
 .hm-tbl th{background:var(--bg);padding:8px 12px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#003D38;}
 .hm-tbl td{padding:8px 12px;border-bottom:1px solid var(--bg);text-align:center;font-size:12px;color:#0A1E1C;}
 .hm-tbl tr:hover td{background:#f0fafa;}
-.hcell{border-radius:6px;padding:4px 10px;display:inline-block;min-width:46px;font-weight:700;}
+.hcell{border-radius:3px;padding:4px 10px;display:inline-block;min-width:46px;font-weight:700;}
 .ins-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px;}
-.ins{background:var(--bg);border:1px solid var(--bdr);border-radius:9px;padding:8px 13px;font-size:11px;color:#1A4A44;line-height:1.5;flex:1;min-width:170px;}
+.ins{background:var(--bg);border:1px solid var(--bdr);border-radius:3px;padding:10px 14px;font-size:13px;color:#1A4A44;line-height:1.6;flex:1;min-width:170px;}
 .ins strong{color:var(--c3);}
 
-.ftr{background:#071F1C;color:rgba(255,255,255,.90);padding:10px 34px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:10px;border-top:2px solid #007A6E;position:sticky;bottom:0;z-index:300;box-shadow:0 -4px 20px rgba(0,0,0,.35);}
-.ftr-brand{display:flex;align-items:center;gap:10px;}
+.ftr{background:#071F1C;color:rgba(255,255,255,.90);padding:8px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:16px;font-size:11px;border-top:2px solid #007A6E;position:sticky;bottom:0;z-index:300;box-shadow:0 -4px 20px rgba(0,0,0,.35);}
+.ftr-brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
 .ftr-logo{height:28px;opacity:.90;}
-.ftr-title{font-weight:700;font-size:12px;color:#7FFFFF;letter-spacing:.3px;}
-.ftr-sub{font-size:10px;color:rgba(255,255,255,.75);margin-top:2px;}
-.ftr-team{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
-.ftr-member{font-size:10px;color:rgba(255,255,255,.85);letter-spacing:.2px;font-weight:500;}
-.ftr-member span{color:rgba(255,255,255,.55);margin-left:4px;font-weight:400;}
-.tab-ins{background:rgba(0,90,80,.06);border:1px solid rgba(0,90,80,.20);border-radius:9px;padding:10px 14px;font-size:12px;color:#0A1E1C;line-height:1.6;flex:1;min-width:170px;}
+.ftr-title{font-weight:700;font-size:12px;color:#7FFFFF;letter-spacing:.2px;}
+.ftr-sub{font-size:11px;color:rgba(255,255,255,.70);margin-top:1px;}
+.ftr-team{display:flex;gap:12px;flex-wrap:nowrap;align-items:center;flex-shrink:1;overflow:hidden;}
+.ftr-member{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.1px;font-weight:500;white-space:nowrap;}
+.ftr-member span{color:rgba(255,255,255,.50);margin-left:3px;font-weight:400;}
+.tab-ins{background:rgba(0,90,80,.06);border:1px solid rgba(0,90,80,.20);border-radius:4px;padding:11px 15px;font-size:13px;color:#0A1E1C;line-height:1.6;flex:1;min-width:170px;}
 .tab-ins strong{color:#005248;font-weight:600;}
 
 ::-webkit-scrollbar{width:5px;height:5px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--c4);border-radius:3px;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 .card{animation:fadeUp .38s ease both;}
 @media(max-width:1200px){.sc-grid{grid-template-columns:repeat(3,1fr);}.g3{grid-template-columns:1fr 1fr;}}
 @media(max-width:860px){.g2,.g3{grid-template-columns:1fr;}.sc-grid{grid-template-columns:repeat(2,1fr);}.hdr,.fbar,.main{padding-left:16px;padding-right:16px;}}
@@ -137,56 +150,82 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 <body>
 
 <div class="hdr">
-  <div class="hdr-l">
-    <div style="background:#FFFFFF;border-radius:10px;padding:8px 16px;display:flex;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.25);"><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACeASEDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAYHBAUIAgED/8QATBAAAQMDAQUFAgcLCAsAAAAAAQACAwQFEQYHEiExQRNRYXGBIpEUMkJScqGxCBUjMzZzdJKywdEWFyQlN1ViszRDU4KUoqTC0vDx/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMFAgQGAQf/xAA1EQACAQMBBAkDAwQDAQAAAAAAAQIDBBEFBhIhMRMiQVFhcZGx0TLB8BSBoSNS4fEWM0Jz/9oADAMBAAIRAxEAPwDjJERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBEVq7LNnbKuOK+X+HMDsOpqVw+OOjn+HcOvXhzkpUpVZbsTQ1HUqGnUXWrPyXa33IimjtB3zUm7PFGKSiJ/0mYEA/RHN32eKtSw7LdM29rXVkctymHN0zsMz4NH78qcsa1jAxjQ1rRgADAAX1W9K0pw5rLPl+o7UX15JqEtyPcvu+fsvAwqK0WmiaG0dso6cD/ZwNb9gWYQC3dIBHctHdNYaYtjyysvVI17ebGO7Rw8w3JC1zNpWi3v3fvxjxNNKB+ypekpx4ZRVqwv6631TnLxw2bu46esVxaW1toop8/KdC3e9DzCg+pNkdqqmOlsdTJQzcxFIS+I+GfjDz4+SnVpvlnuw/q250tUcZLY5AXDzbzC2K8lSp1FxWSS31K/0+eITlFrsfL0Zy3qPT920/WfBbpSOhcfiPHFkg72u5H7Vq11ZebXQXi3yUNxpmVED+bXDke8HofELn3aLo+fSlza1rzNQ1GTTynnw5td4jPr9QrLi1dLrLij6LoO0tPUX0NVbtT+H5fBFURFpnVBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERATjZDpRuoL2aytj3rfREOeCOEj/ks8up93VdAAADA4BR/Z7ZW2HSVFQlm7O5naz95kdxOfLgPRbyqnhpaWWpqHiOGJhfI48mtAySr22pKlT8T4ztBqctRvW48YrhFff9/g1uqdQW7TlrdX3GXDeUcbeL5HdzR/7hURrHXd81FI+N07qOhJ9mmhcQCP8AEebvXh4LD1zqOq1RfpKyTeEDTuU0PzGZ4ep5n/4rE2e6ApqGniuV7gbPWuAcyB4yyHuyOrvs+tVV7f8AYuXuddYaZaaJbxuLpb1V8l3eC8u1+njWdq0zf7owSUNqqZYzykLd1h8nOwFnT6D1bDGXvs0hA+ZLG8+5riV0AOAwEVO7yWeCPJbU3Dl1YLH7/K9jmKaKst9XuSxz0lRGc4c0se0/aFYWhdqNdQSx0WoHvrKMnAqOcsfifnD6/PkprtFdp6OwSSX+FsrcEQBvCUv7mHp9neqBOMnAIHTJW9a3U/qjwLij+n122auKXLt+Hz/O06xoqqnraWOqpJo54JG7zJGOyHBVd90DdaN1FQ2aORj6ps3byAHJjbukAHuzvfUqroLvdbfE6KgudbSxv+M2GdzAfMArEke+SR0kj3Pe45c5xySfFWFa96SG6lzKzS9kVZXiuJVMqPJY9zyi/eho6uuqW01FTTVMzvixxMLnH0CkQ2e6yMPa/eOXdxnHax73u3srTjCUuSydZWvLeg0qtRRb72l7kWRZFfRVdBUupq6mmppm82SsLXD0Kx1i1gnjJSWU8oIpCdE6qFB8ONmn+D9l229vN+JjOcZzy6c1HllKMo80RUrijWz0clLHPDTCL9KaCapnZBTwyTSvOGMY0uc49wA5qTQ7O9ZSxCVtkkDSM4fNG0+4uykYSl9KyY17u3t8dNNRz3tL3Iqi2F4sl2s8gZc7dUUpJw0yMIa7yPI+izLPpLUV4oRW222SVFO5xaHte0DI58yihJvGOIld0I01UlNKL7crHqaNF9IIJB5jgVt7Fpm+3yCSe1W99VHG7ce5rmjBxnHEheKLk8JElWtTox36kkl3t4Rp0W8s+ktQXeqraW328zTUL+zqWmVjezdlwx7Thni13LuSh0nqCtvFVaKW39pW0gzPF20Y3OIHMuweY5FZdHN9hDK+touSdSOUsviuC733LijRopd/NrrX+5f+qh/81hXfRWpbRBFPcbc2nillbCx7qmIjfdyBw7hyPE8F66VRcXF+hHDVLKpJRjWi2+6S+SPIpHd9D6ptNvlr6+1OiposF7xNG/dBOM4a4lRxYyjKPCSwbFC5o3Ed6jNSXg0/YIpLQaD1XXW+K4U1pJppWdox7542Zb34c4EDzUbcC1xacZBxwOUlCUeaPKVzRrNxpzUmueGnjz7j4iIsScIiIAiIgC3Gi6IXHVtro3jeZJVM3x3tBy76gVp1Ldj7Q7aNagRwzKfdE8rOkszS8TT1Go6VpVqLmoyfomdFqA7c7o6h0eKOJ26+umEZx8we077APVT5VF90U529ZGfJxOfX8Grq6k40pNHyPZujGtqdKMuWc+ib+xFtkNoZc9VtnnYHQ0TO2IPIvzhv18fRWbtE1M/TNojnp4WS1M8m5EH53RwyScc/LxUR2B7vaXnON7EOPL28/uU81dp+k1HaHUNSSxwO/DKBxjf0PiO8Lkq0l03W5I67Vq9N6qlX4wjj2z7sh2h9pBr64UF+bBA6Q4hnYC1ufmuyeHmprqe+0On7Y+urn+EcY+NI7uH8ei5+v9orrHcpKCvi3JGcQR8V7ejmnqF+Nfca6vEIraqWcQRiOLfdndaOgUsraMmpLkWlbZ62uKsatJ4g+aXb5GXqi/V2obm6trX+EUQPsxt7h/Hqt5Y9C11bpetvdSXQBkBkpYse1LjiSe4EAgd+c8ue22ZaFNcY7zeYsUo9qCBw/G9znD5vh18udsVoYKGYOADBE7PdjC8q11DqwItR1mNq421p2Yz8L7nMC9wRSTzxwxNLpJHBrWjqScALwtjpeeKm1Na6mcgRRVkL3k8g0PBP1LdSy8HT1ZOEJSSy0i9rbRWbZxo59VO0Ola0dvK0e3PIeTR4Z5DoOPeoK/bHefhm+y1UAps/iyXl+PpZx/yqW7daKpq9GMmp2ue2lqWyygdG7rm59C4KhVYXVWdKShDgkcRs7plrqVCd1drfnJvOez8/0WRtM1zaNS2CjpqSg/pbjvyPlb7VPj5LT1z7sdM8ozs5sf8AKDVtJRPZvU7HdtUd3Zt4kepwPVR9zHta1zmuAcMtJHAjOOCvDYTY/gOnpbxMzE1e7EeeYiacD3nJ9AoaW9cVk5FpqMqOhaXKNDhnKXHPF/C9iasu9C/UElhDgaqOmFQW9N0nGPPl6ELnjaDZDYNWVlA1u7AXdrT/AJt3Ee7iPRWBQ6c1vHtG/lPLRRBj6kmRvwlhIhPs7vPjhuPUBZ23mx/C7HBe4WZlonbkuOsbj+52P1itmupVabbWGn/Bz2i1KOmX9OlTqKUasUnhp4l/vgvMwPue6CkdBcrk5jXVTXthaTzYzGTjzP2LI13rzVWndQzU7bRTNt7XAQySxvIlGOe8CBnw6KuNG6gvWmZ5Lnboy+mJbHUNewmJ3MgEjkeePVWhZtrNhrw2nu9FNRF/BxIEsXr1+pYUasXSUN7dZt6pptxDUJ3cqPT02sYzxXBdn+HzItrXaUzUOkjbI6B9LUzSN7fLg5m4OPsnnkkDpyU52IfkDB+fl/aWn2raJsz9Pz3+0U8VLPA0SPEIxHKwkZOBwB45yOa3GxD8gYPz8v7SlpKorjrvPAr9RqWVTRM2cXFb/FPmnh/4wUFP+Of9I/arp+57/J24/pY/YC9P2haADyDan5Bwf6Cz+Kleib5Zb7Qzz2SmMEMcu48GER5dgHkPBYW1GEamVJM2toNUubixdOpbSgsri+XPyIxsm/K/W/6eP8yZeND/ANr+qfoH9pq97Jvyv1v+nj/MmXjQ/wDa/qn6B/aas4fTDzf3NK7/AO68/wDnD2gedd7Sa7Tupqi0w22nnZE1hD3vcCd5oPTzUG1ttBrNUWdttqLfT07GzNl32PJOQCMcfNW1qHXGmbLdZbdcpZG1MYaXAQFw4gEcfIqrtr+pbNqOS2utD3uFOJRJvRFnxt3HPnyKjuZNKXX/AGN/Z+jTlUo5s3Hhnfy8ZSznGMcfPtJxsi1NFqKwyWK6FstVTRbjg/j28J4ZPfjkfTvUaotmMzdoLqOZj3WWLFQJT8thPCPPfkYPgM9Qq+sF1q7Ld6e50T92aB+8B0cOrT4EcF0hWX6KDRp1G2BzozRCqbETx9pocAT6hKLhXgt/nH2PNXp3OjXMpWf01+GO6Xh68PPwRC9tmqW262t03b3hs9Qz8OWcOzi6N8N77PNUosq619Vc7jPcKyQyVE7y97vHuHgOQWKtOvVdWe8dbo+mQ021VJc+bfe/zkERFCWoREQBERAFI9mdS2k17aJXHANR2f64LP8AuUcX6U8slPURzxO3ZI3B7D3EHIKyhLdkmQXNHp6M6X9ya9Vg60VafdA0Dp9PUNwY3PwWoLHeDXjn72tHqp7p+5Q3iyUdzgI3KiIPwPknqPQ5HomoLZBebLV2up/F1EZZnHxT0d5g4Por6rHpabS7T4rp1y9OvoVJr6Xx9n9yhdkd3Za9VsineGw1rOwJPIOyC0+8Y9Veq5mvNuq7PdZ7dWMMdRTv3XePcR4EcQrT2e7Qaaqp4rZfZ2w1TAGx1Dzhso6bx6O8TwK5O6ovO8j6Fr+nSuMXdDrJrjju7GiWav05Q6ktppaobkzMmCcD2o3fvHeFC9I7MX0tz+FX6WnqIYjmOGIkiQ97sgcPDr9tmtIc0OaQQRkEdV9WpGrOMd1M52hqdzb0XRhLCf8AHl3AAAAAYA5BRnaZeGWjSVWd8CeqaaeEdSXDBPoMn3LZahv9rsNIai41LYzjLIhxkf4Nb+/kqK1nqSr1LdTVTjs4GAtghByGN/eT1KkoUXOWXyN3RdLqXVZVJLqLj5+HyaNERWZ9ELj2ebSaCS2x2jUsnZSRs7NlS9u8yVuMAP7jjhnkeq3Emn9l7pvvg51oDc73CuxH+qHY9MKhEW3G7e7iaTwcxX2YpurKpbVZUt7movgWttBv2ltQG36btUdM0Mna0VxxFFTMz7W7nGRj04DGSt9rzWVBp7S9LSaXuNDLUAshiEMjJRFG0cSQMjoBx71RaLz9XLi8cWZ/8Zt/6UHJuEG3h8ct9/xy597Jp/OfrH+8If8AhmfwVi6P1batSaNlptSXKhgqXiSnqGyysiL2nk4AkdCOXUFUMi8p3VSDy3klvtnLK5pqNOKptPOYpJls7PdT6YsdBVaWvDId0VEgfVYE0FTxwCcZwMAY5jhzW7fpnZbUyisbU25rM7xay4brD5je4eXBUWi9jdYSjKKeCKvs7vVZVqNecJS54fBv89OwuHanrqzvsEtgsczKl8wEckkQ/BxsBHAHqTjHDhjK2Gx29Wah0RDT1t2oKaYTSExzVDGOAJ4cCcqjkXqu5dJvtHk9mLd2P6OEmlneb5tvke5iDK8jiN4q3Nhd2tVvsNfHX3OipHuqt5rZ52sJG6OIBKqBFDRqulPeRaapp0dQtnbylhPHHyLi2a3yz0GqtXzVt0o6eOorg6F8kzQ2Qb8py09RxHLvC/PR98s9NtR1HXT3OkipZ2ERTOlAY/2m8j1VQopVdSSSxyeSuqbOUqk6snN/1IqL5cMY+CV7Wa2kuGuayqoamKpgcyMNkicHNOGNB4hRREWvOW9Jy7y6tbdW1CFFPKikvRYCu246gsb9kTbey7UTqz70xRdgJm7++GNBbjnnKpJFnSrOnnHaamo6XC/dNyk1uPPAIiKIswiIgCIiAIiIAiIgLT2GapZTTu03Wybsczt+kc48A/qz15jxz3q5VySx7o3texxa9py1wOCD3q89mG0GC8wxWq8StiubRuskdwbUfwd4dencrOzuVjo5fsfOtrNBnvu9oLKf1L7/AD6mz2kaJptU0gngcynucLcRSkcHj5jvDuPRUJebVcLPXPorlSyU07fkuHAjvB5EeIXVawrxabbd6X4Nc6KGqi6CRuS3xB5g+IU1xaKr1lwZVaJtPV06Ko1VvU/5Xl8HM9r1Be7WwMoLpVQRjkwPJZ+qeCzp9baqnjLH3qoAPzA1h97QCrQumyGxVDy+grayiz8g4kaPLOD9a1rNjEYfl+onFvcKPB9++q6Wn1M/Sn6HWraPRKvXnhPxi8/wn7lSVE01RM6aolkmkdxc97i5x8yVvtGaQu2p6sNpYjFSNdiWqePYZ5fOPgPqVuWTZZpi3vbLUtnuMg44nfhmfotxn1ypvTww08LIYImRRMGGsY0Na0dwA5LZpWDzmZX6jtpSjBwso5fe+CXku398Eeseh9M2qhFK21U1U7GHy1MTZHvPmRw8hgKs9suj6CxGmu1qj7CmqJDFJCD7LH4JBb3AgHh0wrvcQ1pc4gADJJ6KjNsmr6W+1UNqtrxLR0jy98w5SSYx7PgBnj1z757uNONLGPIqNmLi/uNRU1JuP/rL4Y/OXwV2iIqc+qBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAF9BIIIOCORXxEBYujNqVytbGUl5Y+40reAkz+GYPM/G9ePirWsGr9O3xrRQ3OHtXf6mU7kme7dPP0yuZEW3SvKkOD4o5fUdk7K8bnDqSfdy9PjB1wi5ct+o79b2htFea6Fg5MbO7d92cLaM2hayY3dF8lI8YoyfratpahDtTOaqbD3SfUqRa8cr7M6PWh1Jq6wafY774V8fbDlTxHflP8Aujl64CoC46t1LcGFlVe617Dza2UsafMNwFpCSTk8SsJ6h/ajctNh8Szc1OHdH5fwTbXe0O6ajD6OmBobceBia725B/jPd4Dh5qEoi0JzlN5kzt7SzoWdNUqEcL8594REWBtBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREB//9k=" style="height:46px;display:block;" alt="Cashify"></div>
-    <div><div class="hdr-ti">Decision Support Dashboard</div><div class="hdr-su">Brand Study · March 2026</div></div>
-  </div>
-  <div class="hs-wrap">
-    <div class="hs"><div class="hs-n" id="hdr-n">1,632</div><div class="hs-l" id="hdr-jrn-lbl">Filtered n</div></div>
-    <div class="hs"><div class="hs-n">1,632</div><div class="hs-l">Refurbished</div></div>
-    <div class="hs"><div class="hs-n">1,492</div><div class="hs-l">Buyback</div></div>
-    <div class="hs"><div class="hs-n">101+</div><div class="hs-l">Variables</div></div>
+  <!-- TOP ROW: Logo left, Stats right -->
+  <div class="hdr-top">
+    <div class="hdr-l" style="cursor:pointer;" onclick="document.getElementById('tab-btn-overview').click()">
+      <div id="logo-wrap" style="background:rgba(255,255,255,.12);border-radius:4px;padding:7px 14px;display:flex;align-items:center;"><svg width="110" height="42" viewBox="0 0 110 42" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer large C arc -->
+  <path d="M32,4 C20,4 10,11 6,22 C2,33 7,41 18,41" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- Inner smaller C arc -->
+  <path d="M29,13 C23,13 17,17 15,22 C13,27 16,32 21,33" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Checkmark circle -->
+  <circle cx="34" cy="22" r="9.5" fill="rgba(255,255,255,0.95)"/>
+  <polyline points="28.5,22 32.5,26.5 40,16.5" fill="none" stroke="#007A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- CASHIFY wordmark -->
+  <text x="49" y="27" font-family="'Inter','Arial',sans-serif" font-size="15" font-weight="800" fill="rgba(255,255,255,0.95)" letter-spacing="2.5">CASHIFY</text>
+</svg></div>
+      <div><div class="hdr-ti">Decision Support Dashboard</div><div class="hdr-su">Brand Study · March 2026</div></div>
+    </div>
+    <div class="hs-wrap">
+      <div class="hs"><div class="hs-n" id="hdr-n">1,632</div><div class="hs-l" id="hdr-jrn-lbl">Refurb Filtered n</div></div>
+      <div class="hs-divider"></div>
+      <div class="hs"><div class="hs-n" id="hdr-ref-n">1,632</div><div class="hs-l">Refurbished (base)</div></div>
+      <div class="hs-divider"></div>
+      <div class="hs"><div class="hs-n" id="hdr-bb-n">1,492</div><div class="hs-l">Buyback (base)</div></div>
+      <div class="hs-divider"></div>
+      <div class="hs"><div class="hs-n">101+</div><div class="hs-l">Variables</div></div>
+    </div>
   </div>
 </div>
 
 <div class="fbar">
-  <span class="fl">Journey</span>
-  <div class="jtog">
-    <button class="jb active" onclick="setJ('ref',this)">Refurbished</button>
-    <button class="jb" onclick="setJ('bb',this)">Buyback</button>
+  <!-- ROW 1: Journey + City + Gender -->
+  <div class="fbar-row">
+    <span class="fl">Journey</span>
+    <div class="jtog">
+      <button class="jb active" onclick="setJ('ref',this)">📦 Refurb</button>
+      <button class="jb" onclick="setJ('bb',this)">♻️ Buyback</button>
+    </div>
+    <div class="fbarsep"></div>
+    <span class="fl">City</span>
+    <div class="chips">
+      <div class="chip active" data-f="city" data-v="all" onclick="tc(this)">All</div>
+      <div class="chip" data-f="city" data-v="delhi" onclick="tc(this)">Delhi NCR</div>
+      <div class="chip" data-f="city" data-v="mumbai" onclick="tc(this)">Mumbai</div>
+      <div class="chip" data-f="city" data-v="blr" onclick="tc(this)">Bangalore</div>
+      <div class="chip" data-f="city" data-v="t2" onclick="tc(this)">Tier-2/3</div>
+    </div>
+    <div class="fbarsep"></div>
+    <span class="fl">Gender</span>
+    <div class="chips">
+      <div class="chip active" data-f="gender" data-v="all" onclick="tc(this)">All</div>
+      <div class="chip" data-f="gender" data-v="m" onclick="tc(this)">Male</div>
+      <div class="chip" data-f="gender" data-v="f" onclick="tc(this)">Female</div>
+    </div>
   </div>
-  <div class="fsep"></div><span class="fl">City</span>
-  <div class="chips">
-    <div class="chip active" data-f="city" data-v="all" onclick="tc(this)">All</div>
-    <div class="chip" data-f="city" data-v="delhi" onclick="tc(this)">Delhi NCR</div>
-    <div class="chip" data-f="city" data-v="mumbai" onclick="tc(this)">Mumbai</div>
-    <div class="chip" data-f="city" data-v="blr" onclick="tc(this)">Bangalore</div>
-    <div class="chip" data-f="city" data-v="t2" onclick="tc(this)">Tier-2/3</div>
-  </div>
-  <div class="fsep"></div><span class="fl">Gender</span>
-  <div class="chips">
-    <div class="chip active" data-f="gender" data-v="all" onclick="tc(this)">All</div>
-    <div class="chip" data-f="gender" data-v="m" onclick="tc(this)">Male</div>
-    <div class="chip" data-f="gender" data-v="f" onclick="tc(this)">Female</div>
-  </div>
-  <div class="fsep"></div><span class="fl">Age</span>
-  <div class="chips">
-    <div class="chip active" data-f="age" data-v="all" onclick="tc(this)">All</div>
-    <div class="chip" data-f="age" data-v="1825" onclick="tc(this)">18–25</div>
-    <div class="chip" data-f="age" data-v="2635" onclick="tc(this)">26–35</div>
-    <div class="chip" data-f="age" data-v="36p" onclick="tc(this)">36+</div>
-  </div>
-  <div class="fsep"></div><span class="fl">Income</span>
-  <div class="chips">
-    <div class="chip active" data-f="inc" data-v="all" onclick="tc(this)">All</div>
-    <div class="chip" data-f="inc" data-v="low" onclick="tc(this)">&lt;₹50k</div>
-    <div class="chip" data-f="inc" data-v="mid" onclick="tc(this)">₹50k–1.5L</div>
-    <div class="chip" data-f="inc" data-v="high" onclick="tc(this)">&gt;₹1.5L</div>
+  <!-- ROW 2: Age + Income + Reset -->
+  <div class="fbar-row">
+    <span class="fl">Age</span>
+    <div class="chips">
+      <div class="chip active" data-f="age" data-v="all" onclick="tc(this)">All</div>
+      <div class="chip" data-f="age" data-v="1825" onclick="tc(this)">18–25</div>
+      <div class="chip" data-f="age" data-v="2635" onclick="tc(this)">26–35</div>
+      <div class="chip" data-f="age" data-v="36p" onclick="tc(this)">36+</div>
+    </div>
+    <div class="fbarsep"></div>
+    <span class="fl">Income</span>
+    <div class="chips">
+      <div class="chip active" data-f="inc" data-v="all" onclick="tc(this)">All</div>
+      <div class="chip" data-f="inc" data-v="low" onclick="tc(this)">&lt;₹50k</div>
+      <div class="chip" data-f="inc" data-v="mid" onclick="tc(this)">₹50k–1.5L</div>
+      <div class="chip" data-f="inc" data-v="high" onclick="tc(this)">&gt;₹1.5L</div>
+    </div>
+    <button class="btn-reset" onclick="resetAll()">↺ Reset</button>
   </div>
 </div>
 
 <div class="tabs">
-  <button class="tb active" onclick="setT('overview',this)">📊 Overview</button>
+  <button class="tb active" id="tab-btn-overview" onclick="setT('overview',this)">📊 Overview</button>
   <button class="tb" onclick="setT('awareness',this)">📡 Awareness</button>
   <button class="tb" onclick="setT('health',this)">💊 Brand Health</button>
   <button class="tb" onclick="setT('nps',this)">⭐ NPS</button>
@@ -204,10 +243,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   <div class="sh"><div class="st">Brand Health Scorecard</div><div class="sd">Key KPIs — Cashify vs best competitor. Toggle journey above to switch Refurbished ↔ Buyback.</div></div>
   <div class="sc-grid" id="scorecard"></div>
   <div class="g2">
-    <div class="card"><div class="ct"><span class="dot"></span>Cashify vs Best Competitor — Radar</div><div class="cw cw-280"><canvas id="c-radar"></canvas></div></div>
-    <div class="card"><div class="ct"><span class="dot"></span>City Distribution</div><div class="cw cw-280"><canvas id="c-city"></canvas></div></div>
-    <div class="card"><div class="ct"><span class="dot"></span>Age Profile</div><div class="cw cw-220"><canvas id="c-age"></canvas></div></div>
-    <div class="card"><div class="ct"><span class="dot"></span>Income Distribution</div><div class="cw cw-220"><canvas id="c-income"></canvas></div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>Cashify vs Best Competitor — Radar</div><div class="cw cw-280"><canvas id="c-radar"></canvas></div><div class="chart-insight" id="ci-radar"><span class="ci-label">📊 What this shows</span>Comparing Cashify against its best competitor across brand health dimensions. Larger area = stronger brand position on that metric.</div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>City Distribution</div><div class="cw cw-280"><canvas id="c-city"></canvas></div><div class="chart-insight" id="ci-city"><span class="ci-label">📊 What this shows</span>Share of respondents by city in the filtered selection. Hover a segment for exact count.</div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>Age Profile</div><div class="cw cw-300"><canvas id="c-age"></canvas></div><div class="chart-insight" id="ci-age"><span class="ci-label">📊 What this shows</span>Age distribution of respondents in the current selection.</div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>Income Distribution</div><div class="cw cw-220"><canvas id="c-income"></canvas></div><div class="chart-insight" id="ci-income"><span class="ci-label">📊 What this shows</span>Household income spread of respondents. Bars show % in each bracket.</div></div>
   </div>
 </div>
 
@@ -215,8 +254,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 <div class="panel" id="tab-awareness">
   <div class="sh"><div class="st">Brand Awareness Funnel</div><div class="sd">TOM (unaided) → Aided awareness. Labels show % and absolute n.</div></div>
   <div class="g2">
-    <div class="card"><div class="ct"><span class="dot"></span>Top-of-Mind Awareness % (Unaided)</div><div class="cw cw-320"><canvas id="c-tom"></canvas></div></div>
-    <div class="card"><div class="ct"><span class="dot"></span>Aided Awareness % (Prompted)</div><div class="cw cw-320"><canvas id="c-aided"></canvas></div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>Top-of-Mind Awareness % (Unaided)</div><div class="cw cw-320"><canvas id="c-tom"></canvas></div><div class="chart-insight" id="ci-tom"><span class="ci-label">📊 What this shows</span>Loading…</div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>Aided Awareness % (Prompted)</div><div class="cw cw-320"><canvas id="c-aided"></canvas></div><div class="chart-insight" id="ci-aided"><span class="ci-label">📊 What this shows</span>Loading…</div></div>
     <div class="card full"><div class="ct"><span class="dot"></span>TOM vs Aided — Platform Matrix</div><div class="cw cw-280"><canvas id="c-awcmp"></canvas></div><div class="ins-row" id="aw-ins"></div></div>
   </div>
 </div>
@@ -259,8 +298,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   <div class="sh"><div class="st">Net Promoter Score Analysis</div><div class="sd">Promoter / Passive / Detractor breakdown — data labels on all charts.</div></div>
   <div class="g3">
     <div class="card"><div class="ct"><span class="dot"></span>Cashify NPS</div><div id="nps-c"></div></div>
-    <div class="card" style="grid-column:2/4"><div class="ct"><span class="dot"></span>NPS Score Comparison — All Platforms</div><div class="cw cw-220"><canvas id="c-nps-cmp"></canvas></div></div>
-    <div class="card full"><div class="ct"><span class="dot"></span>Promoter / Passive / Detractor Stack</div><div class="cw cw-320"><canvas id="c-nps-stk"></canvas></div></div>
+    <div class="card" style="grid-column:2/4"><div class="ct"><span class="dot"></span>NPS Score Comparison — All Platforms</div><div class="cw cw-220"><canvas id="c-nps-cmp"></canvas></div><div class="chart-insight" id="ci-nps-cmp"><span class="ci-label">📊 What this shows</span>Loading…</div></div>
+    <div class="card full"><div class="ct"><span class="dot"></span>Promoter / Passive / Detractor Stack</div><div class="cw cw-320"><canvas id="c-nps-stk"></canvas></div><div class="chart-insight" id="ci-nps-stk"><span class="ci-label">📊 What this shows</span>Loading…</div></div>
   </div>
 </div>
 
@@ -268,9 +307,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 <div class="panel" id="tab-consideration">
   <div class="sh"><div class="st">Consideration Set Analysis</div><div class="sd">First Choice → Seriously Consider → Might Consider → Would NOT Consider.</div></div>
   <div class="g2">
-    <div class="card"><div class="ct"><span class="dot"></span>First Choice % Ranking</div><div class="cw cw-320"><canvas id="c-cons1"></canvas></div></div>
+    <div class="card"><div class="ct"><span class="dot"></span>First Choice % Ranking</div><div class="cw cw-320"><canvas id="c-cons1"></canvas></div><div class="chart-insight" id="ci-cons1"><span class="ci-label">📊 What this shows</span>Loading…</div></div>
     <div class="card"><div class="ct"><span class="dot"></span>Stacked Breakdown by Platform</div><div id="cons-stk" style="padding-top:4px;"></div></div>
-    <div class="card full"><div class="ct"><span class="dot"></span>Full Consideration Matrix</div><div class="cw cw-280"><canvas id="c-consmtx"></canvas></div></div>
+    <div class="card full"><div class="ct"><span class="dot"></span>Full Consideration Matrix — Stacked %</div><div class="cw cw-380"><canvas id="c-consmtx"></canvas></div></div>
   </div>
 </div>
 
@@ -348,10 +387,36 @@ let jrn='ref',charts={},selP=['Cashify'];
 let fCity='all',fGender='all',fAge='all',fInc='all';
 function gd(){
   const key=jrn+'_'+fCity+'_'+fGender+'_'+fAge+'_'+fInc;
-  return D[key]||D[jrn+'_all_all_all_all']||{n:0,sc:[],tom:{lb:[],vl:[],cn:[]},aided:{lb:[],vl:[],cn:[]},funnel:[],nps:[],cons:[],src:[],drv:[],fear:[],q20:[],q21a:[],q21b:[],city:{l:[],v:[]},age:{l:[],v:[]},income:{l:[],v:[]},radar:{l:[],c:[],x:[]}};
+  const d=D[key];
+  const el=document.getElementById('hdr-n');
+  if(!d){
+    if(el){el.textContent='—';el.title='No data for this filter combination';}
+    // Return all-all for this journey so charts show something
+    return D[jrn+'_all_all_all_all']||{n:0,sc:[],tom:{lb:[],vl:[],cn:[]},aided:{lb:[],vl:[],cn:[]},funnel:[],nps:[],cons:[],src:[],drv:[],fear:[],q20:[],q21a:[],q21b:[],city:{l:[],v:[]},age:{l:[],v:[]},income:{l:[],v:[]},radar:{l:[],c:[],x:[]}};
+  }
+  if(el){el.textContent=d.n.toLocaleString();el.title='';}
+  return d;
 }
-const TIP={bodyFont:{family:'Inter'},titleFont:{family:'Inter',weight:'700'},backgroundColor:'#071F1C',cornerRadius:10,padding:12};
-const LEG={labels:{font:{family:'Inter',size:10},color:'#003D38',padding:12}};
+const TIP={
+  bodyFont:{family:'Inter',size:12},
+  titleFont:{family:'Inter',weight:'700',size:12},
+  backgroundColor:'rgba(7,31,28,0.95)',
+  cornerRadius:10,padding:12,
+  displayColors:true,
+  callbacks:{
+    label:function(ctx){
+      const v=ctx.parsed.y!==undefined?ctx.parsed.y:ctx.parsed.x;
+      const lbl=ctx.dataset.label||ctx.label||'';
+      if(typeof v==='number'){
+        // NPS scores can be negative
+        const disp=Number.isInteger(v)?v:v.toFixed(1);
+        return ' '+lbl+': '+(v>=0&&lbl.toLowerCase().includes('nps')?'+':'')+disp+(lbl.toLowerCase().includes('nps')||lbl.toLowerCase().includes('score')||v<0?'':v>1?'%':'');
+      }
+      return ' '+lbl+': '+v;
+    }
+  }
+};
+const LEG={labels:{font:{family:'Inter',size:12},color:'#003D38',padding:12}};
 
 function mk(id,type,data,opts){
   if(charts[id]){charts[id].destroy();delete charts[id];}
@@ -365,28 +430,58 @@ function dlPlugin(opts){
     id:'dl_'+Math.random(),
     afterDatasetsDraw(chart){
       const ctx=chart.ctx;
+      const isHoriz=chart.options.indexAxis==='y';
       chart.data.datasets.forEach((ds,di)=>{
         if(!ds.dl)return;
         const meta=chart.getDatasetMeta(di);
         if(meta.hidden)return;
         const cfg=ds.dl;
         meta.data.forEach((el,i)=>{
-          const val=ds.data[i];
-          if(val===null||val===undefined||val===0)return;
-          const txt=cfg.fmt?cfg.fmt(val,i,ds):String(val);
-          if(!txt)return;
-          const pos=el.tooltipPosition();
-          let x=pos.x,y=pos.y;
-          const isHoriz=chart.options.indexAxis==='y';
-          if(isHoriz){if(cfg.outside)x=pos.x+5;else x=pos.x-(ctx.measureText(txt).width/2+8);}
-          else{if(cfg.outside)y=pos.y-8;else y=pos.y+1;}
-          ctx.save();
-          ctx.font=`700 ${cfg.sz||9}px DM Sans`;
-          ctx.fillStyle=cfg.col||'#1A3D38';
-          ctx.textAlign=isHoriz?(cfg.outside?'left':'right'):'center';
-          ctx.textBaseline=isHoriz?'middle':(cfg.outside?'bottom':'middle');
-          ctx.fillText(txt,x,y);
-          ctx.restore();
+          try{
+            const val=ds.data[i];
+            if(val===null||val===undefined||val===0)return;
+            const txt=cfg.fmt?cfg.fmt(val,i,ds):String(val);
+            if(!txt)return;
+            ctx.save();
+            ctx.font=`700 ${cfg.sz||11}px Inter,sans-serif`;
+            const tw=ctx.measureText(txt).width;
+            // Use tooltipPosition() - works reliably across all CJ4 element types
+            const pos=el.tooltipPosition(true);
+            let x=pos.x, y=pos.y;
+            // For bar charts, try to get bar boundaries for centering
+            let insideBar=false, textColor=cfg.col||'#1A3D38';
+            try{
+              const bp=el.getProps(['x','y','base'],false);
+              if(isHoriz){
+                const barW=Math.abs((bp.x||pos.x)-(bp.base||0));
+                if(barW>tw+16){
+                  x=((bp.x||pos.x)+(bp.base||0))/2;
+                  insideBar=true; textColor='#fff';
+                } else {
+                  x=(bp.x||pos.x)+6;
+                  ctx.textAlign='left';
+                }
+              } else {
+                const barH=Math.abs((bp.y||pos.y)-(bp.base||pos.y+20));
+                if(barH>22){
+                  y=((bp.y||pos.y)+(bp.base||pos.y+20))/2;
+                  insideBar=true; textColor='#fff';
+                } else {
+                  y=(bp.y||pos.y)-6;
+                  ctx.textBaseline='bottom';
+                }
+              }
+            } catch(e){
+              // getProps failed - just use tooltipPosition offset
+              if(isHoriz){ x=pos.x+6; ctx.textAlign='left'; }
+              else { y=pos.y-6; ctx.textBaseline='bottom'; }
+            }
+            if(!ctx.textAlign) ctx.textAlign='center';
+            if(!ctx.textBaseline) ctx.textBaseline='middle';
+            ctx.fillStyle=textColor;
+            ctx.fillText(txt,x,y);
+            ctx.restore();
+          } catch(e){ /* skip label on error */ }
         });
       });
     }
@@ -408,29 +503,40 @@ function rRadar(){
       {label:'Cashify',data:d.radar.c,borderColor:'#00B5A5',backgroundColor:'rgba(0,181,165,.15)',pointBackgroundColor:'#00B5A5',borderWidth:2.5,pointRadius:4},
       {label:'Best Competitor',data:d.radar.x,borderColor:'#2D8A3E',backgroundColor:'rgba(45,138,62,.1)',pointBackgroundColor:'#2D8A3E',borderWidth:2,pointRadius:4,borderDash:[5,3]}
     ]
-  },{plugins:{legend:LEG,tooltip:TIP},scales:{r:{beginAtZero:true,max:100,ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:8}},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{font:{family:'Inter',size:10},color:'#1A3D38'}}}});
+  },{plugins:{legend:LEG,tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.r+'/100'}}},scales:{r:{beginAtZero:true,max:100,ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:12}},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{font:{family:'Inter',size:12},color:'#1A3D38'}}}});
 }
 function rCity(){
   const d=gd();
+  const cityTip={...TIP,callbacks:{label:ctx=>' '+ctx.label+': '+ctx.parsed+'%'}};
   mk('c-city','doughnut',{labels:d.city.l,datasets:[{data:d.city.v,backgroundColor:PAL,borderWidth:2,borderColor:'#fff'}]},
-  {cutout:'60%',plugins:{legend:{position:'right',labels:{font:{family:'Inter',size:10},color:'#0A1E1C',padding:8,boxWidth:9}},tooltip:TIP}});
+  {cutout:'60%',plugins:{legend:{position:'right',labels:{font:{family:'Inter',size:12},color:'#0A1E1C',padding:8,boxWidth:9}},tooltip:cityTip}});
 }
 function rAge(){
   const d=gd();
-  mk('c-age','polarArea',{labels:d.age.l,datasets:[{data:d.age.v,backgroundColor:['rgba(0,181,165,.75)','rgba(45,138,62,.75)','rgba(168,213,181,.75)','rgba(128,213,206,.75)','rgba(102,196,154,.75)'],borderColor:'#fff',borderWidth:2}]},
-  {plugins:{legend:{position:'right',labels:{font:{family:'Inter',size:10},color:'#0A1E1C',boxWidth:9,padding:7}},tooltip:TIP},scales:{r:{ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:8}},grid:{color:'rgba(0,0,0,.06)'}}}});
+  mk('c-age','polarArea',{labels:d.age.l,datasets:[{data:d.age.v,backgroundColor:['rgba(0,122,110,.82)','rgba(27,107,42,.82)','rgba(58,189,178,.82)','rgba(0,181,165,.65)','rgba(102,196,154,.75)'],borderColor:'#fff',borderWidth:2}]},
+  {plugins:{
+    legend:{position:'right',labels:{font:{family:'Inter',size:13},color:'#0A1E1C',boxWidth:10,padding:9}},
+    tooltip:{...TIP,callbacks:{label:ctx=>{const v=typeof ctx.parsed==='object'?ctx.parsed.r:ctx.parsed;return ' '+ctx.label+': '+v+'%';}}}
+  },scales:{r:{ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:11},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.06)'}}}});
 }
 function rIncome(){
   const d=gd();
+  if(charts['c-income']){charts['c-income'].destroy();delete charts['c-income'];}
+  const el=document.getElementById('c-income');if(!el)return;
   const pl=dlPlugin();
-  d.income.v;
-  const ds=[{label:'%',data:d.income.v,backgroundColor:PAL,borderRadius:7,borderSkipped:false,
-    dl:{fmt:(v)=>v+'%',outside:true,sz:9,col:'#1A3D38'}}];
-  mk('c-income','bar',{labels:d.income.l,datasets:ds},
-  {plugins:[pl,{id:'empty'}],externalPlugins:[pl],
-   scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:8},color:'#0A1E1C',maxRotation:35}},y:{grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:8},callback:v=>v+'%'},max:34}},
-   plugins:{legend:{display:false},tooltip:TIP}});
-  setTimeout(()=>{const ch=charts['c-income'];if(ch){const pl2=dlPlugin();ch.config.plugins=ch.config.plugins||[];ch.config.plugins.push(pl2);}},50);
+  const ds=[{label:'% of respondents',data:d.income.v,backgroundColor:PAL,borderRadius:7,borderSkipped:false,
+    dl:{fmt:(v)=>v+'%',outside:true,sz:11,col:'#1A3D38'}}];
+  const incTip={...TIP,callbacks:{label:ctx=>' '+ctx.label+': '+ctx.parsed.y+'%'}};
+  charts['c-income']=new Chart(el.getContext('2d'),{
+    type:'bar',
+    data:{labels:d.income.l,datasets:ds},
+    options:{responsive:true,maintainAspectRatio:false,
+      scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:12},color:'#0A1E1C',maxRotation:35}},
+              y:{grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'}}},
+      plugins:{legend:{display:false},tooltip:incTip}}
+  });
+  charts['c-income'].config.plugins=[pl];
+  charts['c-income'].update();
 }
 
 // ---- AWARENESS ----
@@ -443,13 +549,23 @@ function rTOM(){
   const pl=dlPlugin();
   const ctx=el.getContext('2d');
   charts['c-tom']=new Chart(ctx,{type:'bar',
-    data:{labels:s.map(x=>x.l),datasets:[{label:'TOM %',data:s.map(x=>x.v),backgroundColor:s.map((x,i)=>x.l==='Cashify'?PAL[0]:PAL[i+1]),borderRadius:9,borderSkipped:false,
-      dl:{fmt:(v,i)=>v+'%  n='+s[i].n,outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:45,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:11}}}}}
+    data:{labels:s.map(x=>x.l),datasets:[{label:'TOM %',data:s.map(x=>x.v),backgroundColor:s.map((x,i)=>x.l==='Cashify'?PAL[0]:PAL[i+1]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:(v,i)=>v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>{const i=ctx.dataIndex;return ' TOM: '+ctx.parsed.x+'%  (n='+s[i].n+')';}}}},
+      scales:{
+        x:{grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'}},
+        y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}
+      }}
   });
-  charts['c-tom'].options.animation={onComplete:()=>{pl.afterDatasetsDraw(charts['c-tom']);}};
   charts['c-tom'].config.plugins=[pl];charts['c-tom'].update();
+  const _ci_tom=document.getElementById('ci-tom');
+  if(_ci_tom){
+    const topBrand=s[0],second=s[1]||{l:'—',v:0};
+    const isTop=topBrand.l==='Cashify';
+    _ci_tom.innerHTML=`<span class='ci-label'>📊 What this shows</span>Top-of-mind recall: <strong>${topBrand.l}</strong> leads at <strong>${topBrand.v}%</strong> (n=${topBrand.n}). ${isTop?`Cashify is #1 — ${(topBrand.v/Math.max(second.v,1)).toFixed(1)}× ahead of ${second.l} (${second.v}%).`:`Cashify ranks below ${topBrand.l} — gap to close: ${(topBrand.v-s.find(x=>x.l==='Cashify')?.v||0).toFixed(1)} pts.`} Base: n=${d.n.toLocaleString()}.`;
+  }
 }
 function rAided(){
   const d=gd();
@@ -459,12 +575,23 @@ function rAided(){
   if(charts['c-aided']){charts['c-aided'].destroy();delete charts['c-aided'];}
   const pl=dlPlugin();
   charts['c-aided']=new Chart(el.getContext('2d'),{type:'bar',
-    data:{labels:s.map(x=>x.l),datasets:[{label:'Aided %',data:s.map(x=>x.v),backgroundColor:s.map((x,i)=>x.l==='Cashify'?PAL[0]:PAL[i+1]),borderRadius:9,borderSkipped:false,
-      dl:{fmt:(v,i)=>v+'%  n='+s[i].n,outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:11}}}}}
+    data:{labels:s.map(x=>x.l),datasets:[{label:'Aided %',data:s.map(x=>x.v),backgroundColor:s.map((x,i)=>x.l==='Cashify'?PAL[0]:PAL[i+1]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:(v,i)=>v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>{const i=ctx.dataIndex;return ' Aided: '+ctx.parsed.x+'%  (n='+s[i].n+')';}}}},
+      scales:{
+        x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'}},
+        y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}
+      }}
   });
   charts['c-aided'].config.plugins=[pl];charts['c-aided'].update();
+  const _ci_aided=document.getElementById('ci-aided');
+  if(_ci_aided){
+    const cashifyAided=s.find(x=>x.l==='Cashify')||{v:0,n:0};
+    const bestComp=s.find(x=>x.l!=='Cashify')||{l:'—',v:0};
+    _ci_aided.innerHTML=`<span class='ci-label'>📊 What this shows</span>Prompted brand recognition: <strong>Cashify ${cashifyAided.v}%</strong> (n=${cashifyAided.n.toLocaleString()}) — when shown a list, ${cashifyAided.v}% recognise Cashify. Next closest: <strong>${bestComp.l} at ${bestComp.v}%</strong>. Gap: ${(cashifyAided.v-bestComp.v).toFixed(1)} pts in Cashify's favour. Base: n=${d.n.toLocaleString()}.`;
+  }
 }
 function rAwCmp(){
   const d=gd();
@@ -476,15 +603,15 @@ function rAwCmp(){
   const pl=dlPlugin();
   charts['c-awcmp']=new Chart(el.getContext('2d'),{type:'bar',
     data:{labels,datasets:[
-      {label:'TOM %',data:tv,backgroundColor:'rgba(0,181,165,.8)',borderRadius:6,dl:{fmt:v=>v>0?v+'%':'',outside:false,sz:8,col:'#fff'}},
-      {label:'Aided %',data:av,backgroundColor:'rgba(45,138,62,.8)',borderRadius:6,dl:{fmt:v=>v>0?v+'%':'',outside:false,sz:8,col:'#fff'}}
+      {label:'TOM %',data:tv,backgroundColor:'rgba(0,181,165,.8)',borderRadius:6,dl:{fmt:v=>v>0?v+'%':'',outside:false,sz:10,col:'#fff'}},
+      {label:'Aided %',data:av,backgroundColor:'rgba(45,138,62,.8)',borderRadius:6,dl:{fmt:v=>v>0?v+'%':'',outside:false,sz:10,col:'#fff'}}
     ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:TIP},
-      scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}},y:{max:100,ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}}}
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.y+'%'}}},
+      scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:12}}},y:{max:100,ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}}}
   });
   charts['c-awcmp'].config.plugins=[pl];charts['c-awcmp'].update();
   const tomGap=d.tom.vl[1]>0?(d.tom.vl[0]/d.tom.vl[1]).toFixed(1):'N/A';
-  document.getElementById('aw-ins').innerHTML=`<div class="tab-ins">🏆 <strong>Cashify TOM:</strong> ${d.tom.vl[0]}% — ${tomGap}× nearest competitor · n=${d.n}</div><div class="tab-ins">📡 <strong>Aided:</strong> Cashify ${d.aided.vl[0]}% vs best comp ${Math.max(...d.aided.vl.slice(1))}%</div><div class="tab-ins">⚡ Convert aware-but-unfamiliar users through targeted recall campaigns</div>`;
+  const _ai=document.getElementById('aw-ins');if(_ai)_ai.innerHTML=`<div class="tab-ins">🏆 <strong>Cashify TOM:</strong> ${d.tom.vl[0]}% — ${tomGap}× nearest competitor · n=${d.n}</div><div class="tab-ins">📡 <strong>Aided:</strong> Cashify ${d.aided.vl[0]}% vs best comp ${Math.max(...d.aided.vl.slice(1))}%</div><div class="tab-ins">⚡ Convert aware-but-unfamiliar users through targeted recall campaigns</div>`;
 }
 
 // ---- BRAND HEALTH ----
@@ -492,38 +619,85 @@ let selPAll=true;
 
 function rPSel(){
   const d=gd();
-  selP=d.funnel.map(f=>f.n);
-  selPAll=true;
-  const btns=['<button class="psb active" id="psb-all" onclick="togAll(this)">All</button>'];
-  btns.push(...d.funnel.map(f=>`<button class="psb" onclick="togP('${f.n}',this)">${f.n}</button>`));
-  document.getElementById('psel').innerHTML=btns.join('');
+  if(!d.funnel||!d.funnel.length)return;
+  const availableNames=d.funnel.map(f=>f.n);
+  // Validate selP — drop any names not in current funnel
+  const validSel=selP.filter(n=>availableNames.includes(n));
+  // Only reset to All if nothing valid remains
+  if(validSel.length===0){
+    selP=availableNames.slice();
+    selPAll=true;
+  } else {
+    selP=validSel;
+    // selPAll stays unchanged — preserves user's "All" vs specific selection
+  }
+  // Rebuild buttons reflecting current state
+  const btns=['<button class="psb'+(selPAll?' active':'')+'" id="psb-all" onclick="togAll(this)">All</button>'];
+  btns.push(...d.funnel.map(f=>`<button class="psb${(!selPAll&&selP.includes(f.n))?' active':''}" onclick="togP('${f.n}',this)">${f.n}</button>`));
+  const psel=document.getElementById('psel');
+  if(psel)psel.innerHTML=btns.join('');
   rSlopeChart();
   rFunnelCards();
 }
 function togAll(btn){
   const d=gd();
-  selPAll=true; selP=d.funnel.map(f=>f.n);
+  if(!d.funnel||!d.funnel.length)return;
+  selPAll=true;
+  selP=d.funnel.map(f=>f.n);
   document.querySelectorAll('#psel .psb').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
+  if(btn)btn.classList.add('active');
   rSlopeChart(); rFunnelCards();
 }
 function togP(name,btn){
-  document.getElementById('psb-all').classList.remove('active');
+  const d=gd();
+  if(!d.funnel||!d.funnel.length)return;
+  const psbAll=document.getElementById('psb-all');
+  // Deactivate "All" button
+  if(psbAll)psbAll.classList.remove('active');
   selPAll=false;
-  const i=selP.indexOf(name);
-  if(i>-1){if(selP.length>1){selP.splice(i,1);btn.classList.remove('active');}}
-  else{selP.push(name);btn.classList.add('active');}
-  if(selP.length===0){selPAll=true;selP=gd().funnel.map(f=>f.n);document.getElementById('psb-all').classList.add('active');}
+  const idx=selP.indexOf(name);
+  if(idx>-1){
+    // Already selected: deselect if more than 1 selected
+    if(selP.length>1){
+      selP.splice(idx,1);
+      if(btn)btn.classList.remove('active');
+    } else {
+      // Last one: flash and keep
+      if(btn){btn.style.outline='2px solid #E8591A';setTimeout(()=>{btn.style.outline='';},400);}
+    }
+  } else {
+    // Not selected: add it
+    selP.push(name);
+    if(btn)btn.classList.add('active');
+  }
+  // Safety: if somehow empty, reset to all
+  if(selP.length===0){
+    selPAll=true;
+    selP=d.funnel.map(f=>f.n);
+    if(psbAll)psbAll.classList.add('active');
+  }
   rSlopeChart(); rFunnelCards();
 }
 
 // ---- SLOPE CHART (pure SVG) ----
 function rSlopeChart(){
   const d=gd();
-  const active=d.funnel.filter(f=>selP.includes(f.n));
-  const W=Math.max(document.getElementById('slope-chart-wrap').offsetWidth||800,600);
-  const H=400;
-  const PAD={top:48,bottom:60,left:52,right:48};
+  if(!d.funnel||!d.funnel.length){
+    const wrap=document.getElementById('slope-chart-wrap');
+    if(wrap)wrap.innerHTML='<div style="padding:40px;text-align:center;color:#5A9A8E;font-size:13px;">No funnel data for this filter selection.</div>';
+    return;
+  }
+  // Validate selP against current brands
+  const validNames=d.funnel.map(f=>f.n);
+  selP=selP.filter(n=>validNames.includes(n));
+  if(selP.length===0){selP=validNames.slice();selPAll=true;}
+  const active=selPAll?d.funnel:d.funnel.filter(f=>selP.includes(f.n));
+
+  const wrapEl=document.getElementById('slope-chart-wrap');
+  if(!wrapEl)return;
+  const W=Math.max(wrapEl.offsetWidth||800,600);
+  const H=420;
+  const PAD={top:52,bottom:64,left:60,right:120};
   const stages=[
     {k:'awP',nk:'awN',lbl:'Aware'},
     {k:'faP',nk:'faN',lbl:'Familiar'},
@@ -532,59 +706,57 @@ function rSlopeChart(){
   ];
   const cW=W-PAD.left-PAD.right;
   const cH=H-PAD.top-PAD.bottom;
-  const maxVal=80;
+  const allVals=active.flatMap(f=>stages.map(s=>f[s.k]||0));
+  const maxVal=Math.ceil(Math.max(80,...allVals)/10)*10;
   const xStep=cW/3;
   const xOf=(i)=>PAD.left+i*xStep;
   const yOf=(v)=>PAD.top+cH-(v/maxVal*cH);
 
-  // Tooltip state
-  let tooltipData=null;
-
-  // Build SVG
   const svgNS='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(svgNS,'svg');
-  svg.setAttribute('width',W); svg.setAttribute('height',H);
-  svg.style.cssText='display:block;overflow:visible;cursor:crosshair;';
+  svg.setAttribute('width',W);svg.setAttribute('height',H);
+  svg.style.cssText='display:block;overflow:visible;';
 
-  // Y grid lines + labels
-  [0,20,40,60,80].forEach(v=>{
+  // Y grid
+  const yTicks=[];for(let v=0;v<=maxVal;v+=20)yTicks.push(v);
+  yTicks.forEach(v=>{
     const y=yOf(v);
     const line=document.createElementNS(svgNS,'line');
-    line.setAttribute('x1',PAD.left); line.setAttribute('x2',PAD.left+cW);
-    line.setAttribute('y1',y); line.setAttribute('y2',y);
-    line.setAttribute('stroke',v===0?'rgba(0,0,0,.15)':'rgba(0,0,0,.06)');
+    line.setAttribute('x1',PAD.left);line.setAttribute('x2',PAD.left+cW);
+    line.setAttribute('y1',y);line.setAttribute('y2',y);
+    line.setAttribute('stroke',v===0?'rgba(0,0,0,.18)':'rgba(0,0,0,.06)');
     line.setAttribute('stroke-width','1');
     svg.appendChild(line);
     const txt=document.createElementNS(svgNS,'text');
-    txt.setAttribute('x',PAD.left-8); txt.setAttribute('y',y+4);
-    txt.setAttribute('text-anchor','end');
-    txt.setAttribute('font-size','10'); txt.setAttribute('fill','#5A9A8E');
-    txt.setAttribute('font-family','DM Sans,sans-serif');
+    txt.setAttribute('x',PAD.left-10);txt.setAttribute('y',y+4);
+    txt.setAttribute('text-anchor','end');txt.setAttribute('dominant-baseline','middle');
+    txt.setAttribute('font-size','12');txt.setAttribute('fill','#5A9A8E');
+    txt.setAttribute('font-family','Inter,sans-serif');
     txt.textContent=v+'%';
     svg.appendChild(txt);
   });
 
-  // Stage vertical dividers + labels
+  // Stage columns
   stages.forEach((s,i)=>{
     const x=xOf(i);
     if(i>0){
       const vl=document.createElementNS(svgNS,'line');
-      vl.setAttribute('x1',x); vl.setAttribute('x2',x);
-      vl.setAttribute('y1',PAD.top); vl.setAttribute('y2',PAD.top+cH);
-      vl.setAttribute('stroke','rgba(0,0,0,.09)'); vl.setAttribute('stroke-dasharray','4,4');
+      vl.setAttribute('x1',x);vl.setAttribute('x2',x);
+      vl.setAttribute('y1',PAD.top);vl.setAttribute('y2',PAD.top+cH);
+      vl.setAttribute('stroke','rgba(0,0,0,.09)');vl.setAttribute('stroke-dasharray','4,4');
       svg.appendChild(vl);
     }
     const bg=document.createElementNS(svgNS,'rect');
-    bg.setAttribute('x',x-34); bg.setAttribute('y',PAD.top+cH+10);
-    bg.setAttribute('width',68); bg.setAttribute('height',22);
-    bg.setAttribute('rx',11); bg.setAttribute('fill',i===3?'rgba(0,181,165,.12)':'rgba(168,213,181,.2)');
+    bg.setAttribute('x',x-38);bg.setAttribute('y',PAD.top+cH+12);
+    bg.setAttribute('width',76);bg.setAttribute('height',24);
+    bg.setAttribute('rx',3);bg.setAttribute('fill',i===3?'rgba(232,89,26,.12)':'rgba(168,213,181,.2)');
     svg.appendChild(bg);
     const lbl=document.createElementNS(svgNS,'text');
-    lbl.setAttribute('x',x); lbl.setAttribute('y',PAD.top+cH+25);
-    lbl.setAttribute('text-anchor','middle');
-    lbl.setAttribute('font-size','11.5'); lbl.setAttribute('font-weight','700');
+    lbl.setAttribute('x',x);lbl.setAttribute('y',PAD.top+cH+28);
+    lbl.setAttribute('text-anchor','middle');lbl.setAttribute('dominant-baseline','middle');
+    lbl.setAttribute('font-size','12');lbl.setAttribute('font-weight','700');
     lbl.setAttribute('fill',i===3?'#E8591A':'#1A3D38');
-    lbl.setAttribute('font-family','DM Sans,sans-serif');
+    lbl.setAttribute('font-family','Inter,sans-serif');
     lbl.textContent=s.lbl;
     svg.appendChild(lbl);
   });
@@ -592,130 +764,153 @@ function rSlopeChart(){
   // Draw lines + dots per platform
   const groups=[];
   active.forEach((f,fi)=>{
-    const pts=stages.map((s,i)=>({x:xOf(i),y:yOf(f[s.k]),v:f[s.k],n:f[s.nk]}));
+    const pts=stages.map((s,i)=>({x:xOf(i),y:yOf(f[s.k]),v:f[s.k],n:f[s.nk],stage:s.lbl}));
     const grp=document.createElementNS(svgNS,'g');
-    grp.style.cssText='transition:opacity .2s;';
 
-    // Cubic bezier path
-    let d2='M '+pts[0].x+' '+pts[0].y;
+    // Bezier path
+    let pathD='M '+pts[0].x+' '+pts[0].y;
     for(let i=1;i<pts.length;i++){
-      const cp1x=pts[i-1].x+(pts[i].x-pts[i-1].x)*0.4;
-      const cp2x=pts[i].x-(pts[i].x-pts[i-1].x)*0.4;
-      d2+=` C ${cp1x} ${pts[i-1].y} ${cp2x} ${pts[i].y} ${pts[i].x} ${pts[i].y}`;
+      const cp1x=pts[i-1].x+(pts[i].x-pts[i-1].x)*0.45;
+      const cp2x=pts[i].x-(pts[i].x-pts[i-1].x)*0.45;
+      pathD+=` C ${cp1x} ${pts[i-1].y} ${cp2x} ${pts[i].y} ${pts[i].x} ${pts[i].y}`;
     }
 
-    // Shadow/glow
+    // Glow
     const glow=document.createElementNS(svgNS,'path');
-    glow.setAttribute('d',d2); glow.setAttribute('fill','none');
-    glow.setAttribute('stroke',f.col); glow.setAttribute('stroke-width','6');
-    glow.setAttribute('stroke-opacity','0.15'); glow.setAttribute('stroke-linecap','round');
+    glow.setAttribute('d',pathD);glow.setAttribute('fill','none');
+    glow.setAttribute('stroke',f.col);glow.setAttribute('stroke-width','7');
+    glow.setAttribute('stroke-opacity','0.12');glow.setAttribute('stroke-linecap','round');
     grp.appendChild(glow);
 
-    // Main line
+    // Main line with dash animation
     const path=document.createElementNS(svgNS,'path');
-    path.setAttribute('d',d2); path.setAttribute('fill','none');
-    path.setAttribute('stroke',f.col); path.setAttribute('stroke-width','2.8');
-    path.setAttribute('stroke-linecap','round'); path.setAttribute('stroke-linejoin','round');
-    // Animate stroke
-    const totalLen=cW;
-    path.style.cssText=`stroke-dasharray:${totalLen};stroke-dashoffset:${totalLen};transition:stroke-dashoffset 1.0s cubic-bezier(.4,0,.2,1) ${fi*0.08}s;`;
+    path.setAttribute('d',pathD);path.setAttribute('fill','none');
+    path.setAttribute('stroke',f.col);path.setAttribute('stroke-width','2.5');
+    path.setAttribute('stroke-linecap','round');path.setAttribute('stroke-linejoin','round');
+    const totalLen=cW+50;
+    path.style.strokeDasharray=totalLen;
+    path.style.strokeDashoffset=totalLen;
+    path.style.transition=`stroke-dashoffset 0.9s cubic-bezier(.4,0,.2,1) ${fi*0.07}s`;
     grp.appendChild(path);
 
+    // Brand label at right end of line
+    const lastPt=pts[pts.length-1];
+    const nameLabel=document.createElementNS(svgNS,'text');
+    nameLabel.setAttribute('x',lastPt.x+10);
+    nameLabel.setAttribute('y',lastPt.y);
+    nameLabel.setAttribute('text-anchor','start');
+    nameLabel.setAttribute('dominant-baseline','middle');
+    nameLabel.setAttribute('font-size','11');
+    nameLabel.setAttribute('font-weight','700');
+    nameLabel.setAttribute('fill',f.col);
+    nameLabel.setAttribute('font-family','Inter,sans-serif');
+    nameLabel.textContent=f.n.split(' ')[0]; // first word
+    grp.appendChild(nameLabel);
+
     // Dots + value labels
-    pts.forEach((pt,i)=>{
-      const circOuter=document.createElementNS(svgNS,'circle');
-      circOuter.setAttribute('cx',pt.x); circOuter.setAttribute('cy',pt.y);
-      circOuter.setAttribute('r','7'); circOuter.setAttribute('fill','#fff');
-      circOuter.setAttribute('stroke',f.col); circOuter.setAttribute('stroke-width','2.5');
-      grp.appendChild(circOuter);
-
-      const circ=document.createElementNS(svgNS,'circle');
-      circ.setAttribute('cx',pt.x); circ.setAttribute('cy',pt.y);
-      circ.setAttribute('r','3.5'); circ.setAttribute('fill',f.col);
-      grp.appendChild(circ);
-
-      // Value label on top dot
-      const offset=fi%2===0?-13:13;
+    pts.forEach((pt,pi)=>{
+      // White ring
+      const ring=document.createElementNS(svgNS,'circle');
+      ring.setAttribute('cx',pt.x);ring.setAttribute('cy',pt.y);
+      ring.setAttribute('r','7');ring.setAttribute('fill','#fff');
+      ring.setAttribute('stroke',f.col);ring.setAttribute('stroke-width','2.5');
+      grp.appendChild(ring);
+      // Inner dot
+      const dot=document.createElementNS(svgNS,'circle');
+      dot.setAttribute('cx',pt.x);dot.setAttribute('cy',pt.y);
+      dot.setAttribute('r','3.5');dot.setAttribute('fill',f.col);
+      grp.appendChild(dot);
+      // Value label - offset alternately above/below
+      const yOff=fi%2===0?-16:16;
       const vlbl=document.createElementNS(svgNS,'text');
-      vlbl.setAttribute('x',pt.x+(i===0?-9:i===3?9:0));
-      vlbl.setAttribute('y',pt.y+offset);
-      vlbl.setAttribute('text-anchor',i===0?'end':i===3?'start':'middle');
-      vlbl.setAttribute('font-size','9.5'); vlbl.setAttribute('font-weight','700');
-      vlbl.setAttribute('fill',f.col);
-      vlbl.setAttribute('font-family','DM Sans,sans-serif');
+      vlbl.setAttribute('x',pt.x);vlbl.setAttribute('y',pt.y+yOff);
+      vlbl.setAttribute('text-anchor','middle');
+      vlbl.setAttribute('dominant-baseline',yOff<0?'auto':'hanging');
+      vlbl.setAttribute('font-size','11');vlbl.setAttribute('font-weight','700');
+      vlbl.setAttribute('fill',f.col);vlbl.setAttribute('font-family','Inter,sans-serif');
       vlbl.textContent=pt.v+'%';
       grp.appendChild(vlbl);
     });
-    svg.appendChild(grp);
-    groups.push({grp,f,pts});
 
-    // Trigger animation
-    requestAnimationFrame(()=>{ path.style.strokeDashoffset='0'; });
+    svg.appendChild(grp);
+    groups.push({grp,f,pts,path});
+    requestAnimationFrame(()=>{path.style.strokeDashoffset='0';});
   });
 
-  // Hover tooltip overlay
-  const tooltip=document.createElementNS(svgNS,'g');
-  tooltip.style.display='none';
+  // Tooltip overlay
+  const ttG=document.createElementNS(svgNS,'g');
+  ttG.style.display='none';
   const ttBox=document.createElementNS(svgNS,'rect');
-  ttBox.setAttribute('rx','8'); ttBox.setAttribute('fill','rgba(26,61,56,.92)');
-  tooltip.appendChild(ttBox);
-  svg.appendChild(tooltip);
+  ttBox.setAttribute('rx','4');ttBox.setAttribute('fill','rgba(7,31,28,.93)');
+  ttG.appendChild(ttBox);
+  svg.appendChild(ttG);
 
-  // Hover interaction
-  const hitZoneW=xStep*0.8;
+  // Hit zones per stage
+  const hitW=Math.min(xStep*0.85,100);
   stages.forEach((s,si)=>{
     const hx=xOf(si);
     const hz=document.createElementNS(svgNS,'rect');
-    hz.setAttribute('x',hx-hitZoneW/2); hz.setAttribute('y',PAD.top);
-    hz.setAttribute('width',hitZoneW); hz.setAttribute('height',cH);
-    hz.setAttribute('fill','transparent'); hz.style.cursor='crosshair';
+    hz.setAttribute('x',hx-hitW/2);hz.setAttribute('y',PAD.top);
+    hz.setAttribute('width',hitW);hz.setAttribute('height',cH);
+    hz.setAttribute('fill','transparent');hz.style.cursor='pointer';
+
     hz.addEventListener('mouseenter',()=>{
-      // Dim non-hovered
-      groups.forEach(g=>g.grp.style.opacity='0.25');
-      // Build tooltip
-      tooltip.style.display='block';
-      while(tooltip.children.length>1) tooltip.removeChild(tooltip.lastChild);
-      const lines=active.map(f=>`${f.n}: ${f[s.k]}%`);
-      const lineH=16, pad=10, maxW=lines.reduce((m,l)=>Math.max(m,l.length*6.2+24),80);
-      const ttH=lines.length*lineH+pad*2+18;
-      const ttX=Math.min(Math.max(hx-maxW/2,PAD.left),W-maxW-4);
-      const ttY=PAD.top-ttH-8;
-      ttBox.setAttribute('x',ttX); ttBox.setAttribute('y',ttY);
-      ttBox.setAttribute('width',maxW); ttBox.setAttribute('height',ttH);
-      const hdr=document.createElementNS(svgNS,'text');
-      hdr.setAttribute('x',ttX+pad); hdr.setAttribute('y',ttY+pad+10);
-      hdr.setAttribute('font-size','11'); hdr.setAttribute('font-weight','700');
-      hdr.setAttribute('fill','#fff'); hdr.setAttribute('font-family','DM Sans,sans-serif');
-      hdr.textContent=s.lbl; tooltip.appendChild(hdr);
-      active.forEach((f,i)=>{
-        const dot=document.createElementNS(svgNS,'rect');
-        dot.setAttribute('x',ttX+pad); dot.setAttribute('y',ttY+pad+22+i*lineH);
-        dot.setAttribute('width',8); dot.setAttribute('height',8); dot.setAttribute('rx',4);
-        dot.setAttribute('fill',f.col); tooltip.appendChild(dot);
+      if(active.length>1) groups.forEach(g=>{g.grp.style.opacity='0.22';});
+      // highlight hovered platform's group fully
+      // build tooltip
+      ttG.style.display='block';
+      while(ttG.children.length>1)ttG.removeChild(ttG.lastChild);
+      const lineH=18,pad=10;
+      const titleTxt=s.lbl;
+      const lines=active.map(f=>`${f.n}: ${f[s.k]}%  n=${(f[s.nk]||0).toLocaleString()}`);
+      const maxLineW=Math.max(titleTxt.length*8,lines.reduce((m,l)=>Math.max(m,l.length*6.8),80))+pad*2;
+      const ttH=lines.length*lineH+pad*2+20;
+      const rawX=hx-maxLineW/2;
+      const ttX=Math.min(Math.max(rawX,PAD.left),W-maxLineW-8);
+      const rawY=PAD.top-ttH-10;
+      const ttY=Math.max(4,rawY);
+      ttBox.setAttribute('x',ttX);ttBox.setAttribute('y',ttY);
+      ttBox.setAttribute('width',maxLineW);ttBox.setAttribute('height',ttH);
+      // title
+      const th=document.createElementNS(svgNS,'text');
+      th.setAttribute('x',ttX+pad);th.setAttribute('y',ttY+pad+11);
+      th.setAttribute('font-size','12');th.setAttribute('font-weight','700');
+      th.setAttribute('fill','#fff');th.setAttribute('font-family','Inter,sans-serif');
+      th.textContent=titleTxt;ttG.appendChild(th);
+      // lines
+      active.forEach((f,fi)=>{
+        const dot=document.createElementNS(svgNS,'circle');
+        dot.setAttribute('cx',ttX+pad+5);dot.setAttribute('cy',ttY+pad+24+fi*lineH);
+        dot.setAttribute('r','4');dot.setAttribute('fill',f.col);ttG.appendChild(dot);
         const tl=document.createElementNS(svgNS,'text');
-        tl.setAttribute('x',ttX+pad+12); tl.setAttribute('y',ttY+pad+30+i*lineH);
-        tl.setAttribute('font-size','10'); tl.setAttribute('fill','rgba(255,255,255,.88)');
-        tl.setAttribute('font-family','DM Sans,sans-serif');
-        tl.textContent=`${f.n}: ${f[s.k]}%  (n=${f[s.nk].toLocaleString()})`;
-        tooltip.appendChild(tl);
+        tl.setAttribute('x',ttX+pad+14);tl.setAttribute('y',ttY+pad+28+fi*lineH);
+        tl.setAttribute('font-size','11');tl.setAttribute('fill','rgba(255,255,255,.88)');
+        tl.setAttribute('font-family','Inter,sans-serif');
+        tl.textContent=`${f.n}: ${f[s.k]}%  (n=${(f[s.nk]||0).toLocaleString()})`;
+        ttG.appendChild(tl);
       });
     });
     hz.addEventListener('mouseleave',()=>{
-      groups.forEach(g=>g.grp.style.opacity='1');
-      tooltip.style.display='none';
+      groups.forEach(g=>{g.grp.style.opacity='1';});
+      ttG.style.display='none';
     });
     svg.appendChild(hz);
   });
 
-  const wrap=document.getElementById('slope-chart-wrap');
-  wrap.innerHTML='';
-  wrap.appendChild(svg);
+  wrapEl.innerHTML='';
+  wrapEl.appendChild(svg);
 }
+
 
 // ---- VISUAL FUNNEL CARDS ----
 function rFunnelCards(){
   const d=gd();
-  const active=d.funnel.filter(f=>selP.includes(f.n));
+  if(!d.funnel||!d.funnel.length){
+    const el=document.getElementById('funnel-cards');
+    if(el)el.innerHTML='<div style="padding:30px;text-align:center;color:#5A9A8E;font-size:13px;">No funnel data for this filter.</div>';
+    return;
+  }
+  const active=selPAll?d.funnel:d.funnel.filter(f=>selP.includes(f.n));
   const stages=[
     {k:'awP',nk:'awN',lbl:'Aware',col:'#2D8A3E'},
     {k:'faP',nk:'faN',lbl:'Familiar',col:'#00B5A5'},
@@ -735,7 +930,7 @@ function rFunnelCards(){
     <div style="display:grid;grid-template-columns:140px 1fr 88px 88px 88px;gap:0;padding:0 0 8px 0;margin-bottom:4px;border-bottom:2px solid var(--bg);">
       <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1A4A44;">Platform</div>
       <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1A4A44;padding-left:8px;">Funnel Journey → Strong Intent</div>
-      ${convs.map(c=>`<div style="font-size:9px;font-weight:700;text-align:center;color:${c.col};letter-spacing:.5px;">${c.lbl}<br>Conv%</div>`).join('')}
+      ${convs.map(c=>`<div style="font-size:11px;font-weight:700;text-align:center;color:${c.col};letter-spacing:.5px;">${c.lbl}<br>Conv%</div>`).join('')}
     </div>
     ${active.map((f,fi)=>{
       const isCashify=f.n==='Cashify';
@@ -745,12 +940,12 @@ function rFunnelCards(){
         const barW=Math.max(pct/maxAw*100,6);
         const isLast=si===stages.length-1;
         return`<div style="flex:1;display:flex;flex-direction:column;gap:3px;">
-          <div style="font-size:9px;font-weight:700;color:${s.col};text-align:center;letter-spacing:.3px;">${s.lbl}</div>
+          <div style="font-size:12px;font-weight:700;color:${s.col};text-align:center;letter-spacing:.3px;">${s.lbl}</div>
           <div style="background:rgba(0,0,0,.04);border-radius:6px;padding:3px 4px;display:flex;justify-content:center;">
             <div style="width:100%;background:rgba(0,0,0,.05);border-radius:4px;height:28px;overflow:hidden;position:relative;">
               <div style="position:absolute;left:0;top:0;height:100%;width:${barW}%;background:${f.col};border-radius:4px;opacity:${0.55+si*0.12};transition:width .6s ease;"></div>
               <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-                <span style="font-size:11px;font-weight:800;color:${barW>40?'#fff':f.col};z-index:1;">${pct}%</span>
+                <span style="font-size:13px;font-weight:800;color:${barW>40?'#fff':f.col};z-index:1;">${pct}%</span>
               </div>
             </div>
           </div>
@@ -765,7 +960,7 @@ function rFunnelCards(){
         <!-- Platform name -->
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:12px;height:12px;border-radius:3px;flex-shrink:0;background:${f.col};${isCashify?'box-shadow:0 0 0 2px rgba(0,181,165,.3)':''}"></div>
-          <span style="font-size:12px;font-weight:${isCashify?'800':'600'};color:${isCashify?f.col:'#1A3D38'}">${f.n}</span>
+          <span style="font-size:14px;font-weight:${isCashify?'800':'600'};color:${isCashify?f.col:'#1A3D38'}">${f.n}</span>
         </div>
         <!-- Stage bars -->
         <div style="display:flex;align-items:flex-start;gap:4px;padding:0 8px;">${stageHtml}</div>
@@ -774,7 +969,7 @@ function rFunnelCards(){
           const v=f[c.k];
           const cc=convColor(v);
           return`<div style="text-align:center;">
-            <div style="font-size:14px;font-weight:800;color:${cc};">${v}%</div>
+            <div style="font-size:16px;font-weight:800;color:${cc};">${v}%</div>
             <div style="font-size:8px;color:#5A9A8E;margin-top:2px;">${v>=70?'✅':v>=55?'⚡':'⚠️'}</div>
           </div>`;
         }).join('')}
@@ -807,26 +1002,45 @@ function downloadFunnelPNG(){
 
 // ---- NPS ----
 function rNPS(){
-  const d=gd();const c=d.nps[0];
-  const col=c.sc>-25?'#4CAF8A':c.sc>-40?'#2D8A3E':'#00B5A5';
-  document.getElementById('nps-c').innerHTML=`<div class="nps-g"><div class="nps-big" style="color:${col}">${c.sc}</div><div class="nps-sl">Net Promoter Score</div><div class="nps-bar"><div class="nps-pr" style="width:${c.pr}%"></div><div class="nps-pa" style="width:${c.pa}%"></div><div class="nps-de" style="width:${c.de}%"></div></div><div class="nps-leg"><span style="color:#4CAF8A">▪ Promo ${c.pr}%</span><span>▪ Pass ${c.pa}%</span><span style="color:#00B5A5">▪ Det ${c.de}%</span></div></div>`;
+  const d=gd();
+  if(!d.nps||!d.nps.length){return;}
+  const c=d.nps[0];
+  if(!c){return;}
+  const col=c.sc>-25?'#27AE60':c.sc>-40?'#E8591A':'#C0392B';
+  const npsEl=document.getElementById('nps-c');
+  if(npsEl)npsEl.innerHTML=`<div class="nps-g"><div class="nps-big" style="color:${col}">${c.sc}</div><div class="nps-sl">Net Promoter Score · Cashify</div><div class="nps-bar"><div class="nps-pr" style="width:${c.pr}%"></div><div class="nps-pa" style="width:${c.pa}%"></div><div class="nps-de" style="width:${c.de}%"></div></div><div class="nps-leg"><span style="color:#27AE60">▪ Promoters ${c.pr}%</span><span style="color:#888">▪ Passives ${c.pa}%</span><span style="color:#C0392B">▪ Detractors ${c.de}%</span></div></div>`;
   const elC=document.getElementById('c-nps-cmp');const elS=document.getElementById('c-nps-stk');
+  if(!elC||!elS)return;
   if(charts['c-nps-cmp']){charts['c-nps-cmp'].destroy();}
   if(charts['c-nps-stk']){charts['c-nps-stk'].destroy();}
   const plC=dlPlugin();const plS=dlPlugin();
   charts['c-nps-cmp']=new Chart(elC.getContext('2d'),{type:'bar',
-    data:{labels:d.nps.map(x=>x.p),datasets:[{label:'NPS',data:d.nps.map(x=>x.sc),backgroundColor:d.nps.map((x,i)=>i===0?'#00B5A5':'#2D8A3E'),borderRadius:7,borderSkipped:false,
-      dl:{fmt:v=>String(v),outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:TIP},scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:8}}},y:{min:-100,max:15,ticks:{font:{family:'Inter',size:8}},grid:{color:'rgba(0,0,0,.04)'}}}},
+    data:{labels:d.nps.map(x=>x.p),datasets:[{label:'NPS Score',data:d.nps.map(x=>x.sc),backgroundColor:d.nps.map((x,i)=>i===0?'#007A6E':'#2D8A3E'),borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>(v>=0?'+':'')+v,sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>' NPS: '+(ctx.parsed.y>=0?'+':'')+ctx.parsed.y}}},
+      scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:12}}},y:{min:-100,max:20,ticks:{font:{family:'Inter',size:12},callback:v=>(v>=0?'+':'')+v},grid:{color:'rgba(0,0,0,.04)'}}}},
   });charts['c-nps-cmp'].config.plugins=[plC];charts['c-nps-cmp'].update();
   charts['c-nps-stk']=new Chart(elS.getContext('2d'),{type:'bar',
     data:{labels:d.nps.map(x=>x.p),datasets:[
-      {label:'Promoters',data:d.nps.map(x=>x.pr),backgroundColor:'rgba(76,175,138,.85)',dl:{fmt:v=>v>4?v+'%':'',outside:false,sz:8,col:'#fff'}},
-      {label:'Passives',data:d.nps.map(x=>x.pa),backgroundColor:'rgba(168,213,181,.9)',dl:{fmt:v=>v>4?v+'%':'',outside:false,sz:8,col:'#4A8880'}},
-      {label:'Detractors',data:d.nps.map(x=>x.de),backgroundColor:'rgba(0,181,165,.85)',dl:{fmt:v=>v>4?v+'%':'',outside:false,sz:8,col:'#fff'}}
+      {label:'Promoters',data:d.nps.map(x=>x.pr),backgroundColor:'rgba(27,122,58,.88)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#fff'}},
+      {label:'Passives',data:d.nps.map(x=>x.pa),backgroundColor:'rgba(90,154,110,.85)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#fff'}},
+      {label:'Detractors',data:d.nps.map(x=>x.de),backgroundColor:'rgba(192,57,26,.88)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#fff'}}
     ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:TIP},scales:{x:{stacked:true,grid:{display:false},ticks:{font:{family:'Inter',size:9}}},y:{stacked:true,max:100,ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}}}
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:LEG,tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.y+'%'}}},
+      scales:{x:{stacked:true,grid:{display:false},ticks:{font:{family:'Inter',size:12}}},y:{stacked:true,max:100,ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}}}
   });charts['c-nps-stk'].config.plugins=[plS];charts['c-nps-stk'].update();
+  // Update "What this shows" insight panels
+  const _ci_cmp=document.getElementById('ci-nps-cmp');
+  if(_ci_cmp){
+    const best=d.nps[0],second=d.nps[1]||{p:'—',sc:0};
+    _ci_cmp.innerHTML=`<span class='ci-label'>📊 What this shows</span><strong>${best.p} leads NPS at ${best.sc}</strong> — best in category. ${best.p} outperforms ${second.p} (${second.sc}) by ${Math.abs(best.sc-second.sc)} pts. All brands score negative, confirming a category-wide trust gap. Base: n=${d.n.toLocaleString()}.`;
+  }
+  const _ci_stk=document.getElementById('ci-nps-stk');
+  if(_ci_stk){
+    _ci_stk.innerHTML=`<span class='ci-label'>📊 What this shows</span>Cashify breakdown: <strong>${c.pr}% Promoters</strong> (score 9–10, will recommend) · <strong>${c.pa}% Passives</strong> (score 7–8, neutral) · <strong>${c.de}% Detractors</strong> (score 0–6, unlikely to recommend). NPS = Promoters% − Detractors% = ${c.pr}% − ${c.de}% = <strong>${c.sc}</strong>. Base: n=${d.n.toLocaleString()}.`;
+  }
 }
 
 // ---- CONSIDERATION ----
@@ -838,27 +1052,36 @@ function rCons(){
   if(charts['c-consmtx']){charts['c-consmtx'].destroy();}
   const pl1=dlPlugin();const plM=dlPlugin();
   charts['c-cons1']=new Chart(el1.getContext('2d'),{type:'bar',
-    data:{labels:s.map(x=>x.p),datasets:[{label:'First Choice %',data:s.map(x=>x.fi),backgroundColor:s.map((x,i)=>x.p==='Cashify'?PAL[0]:PAL[i+1]),borderRadius:9,borderSkipped:false,
-      dl:{fmt:v=>v+'%',outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},scales:{x:{max:30,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}}}
+    data:{labels:s.map(x=>x.p),datasets:[{label:'First Choice %',data:s.map(x=>x.fi),backgroundColor:s.map((x,i)=>x.p==='Cashify'?PAL[0]:PAL[i+1]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:TIP},
+      scales:{x:{grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}}}
   });charts['c-cons1'].config.plugins=[pl1];charts['c-cons1'].update();
   document.getElementById('cons-stk').innerHTML=s.map(p=>`<div class="cb-row"><div class="cb-l"><span style="font-weight:600">${p.p}</span><span style="font-size:10px;color:#4A8880">First: ${p.fi}%</span></div><div class="cb-bar"><div class="cb-seg" style="flex:${p.fi};background:#00B5A5;">${p.fi>5?p.fi+'%':''}</div><div class="cb-seg" style="flex:${p.se};background:#2D8A3E;">${p.se>5?p.se+'%':''}</div><div class="cb-seg" style="flex:${p.mi};background:#A8D5B5;color:#4A8880;">${p.mi>8?p.mi+'%':''}</div><div class="cb-seg" style="flex:${p.no};background:#f0ddd5;color:#5A9A8E;">${p.no>8?p.no+'%':''}</div></div></div>`).join('');
   charts['c-consmtx']=new Chart(elM.getContext('2d'),{type:'bar',
     data:{labels:d.cons.map(x=>x.p),datasets:[
-      {label:'First Choice',data:d.cons.map(x=>x.fi),backgroundColor:'rgba(0,181,165,.85)',borderRadius:4,dl:{fmt:v=>v+'%',outside:false,sz:7,col:'#fff'}},
-      {label:'Seriously',data:d.cons.map(x=>x.se),backgroundColor:'rgba(45,138,62,.85)',borderRadius:4,dl:{fmt:v=>v+'%',outside:false,sz:7,col:'#fff'}},
-      {label:'Might',data:d.cons.map(x=>x.mi),backgroundColor:'rgba(168,213,181,.85)',borderRadius:4,dl:{fmt:v=>v+'%',outside:false,sz:7,col:'#4A8880'}},
-      {label:'Would NOT',data:d.cons.map(x=>x.no),backgroundColor:'rgba(240,221,213,.85)',borderRadius:4,dl:{fmt:v=>v+'%',outside:false,sz:7,col:'#5A9A8E'}}
+      {label:'First Choice',data:d.cons.map(x=>x.fi),backgroundColor:'rgba(0,122,110,.90)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#fff'}},
+      {label:'Seriously Consider',data:d.cons.map(x=>x.se),backgroundColor:'rgba(45,138,62,.85)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#fff'}},
+      {label:'Might Consider',data:d.cons.map(x=>x.mi),backgroundColor:'rgba(168,213,181,.88)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#1A4A44'}},
+      {label:'Would NOT',data:d.cons.map(x=>x.no),backgroundColor:'rgba(192,57,26,.75)',dl:{fmt:v=>v>5?v+'%':'',sz:11,col:'#fff'}}
     ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:TIP},scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:9}}},y:{max:80,ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}}}
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{...LEG,position:'top'},tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.y+'%'}}},
+      scales:{
+        x:{stacked:true,grid:{display:false},ticks:{font:{family:'Inter',size:12}}},
+        y:{stacked:true,max:100,ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}
+      }}
   });charts['c-consmtx'].config.plugins=[plM];charts['c-consmtx'].update();
 }
 
 // ---- SOURCES ----
 function rSrc(){
   const d=gd();
+  const srcTip={...TIP,callbacks:{label:ctx=>' '+ctx.label+': '+ctx.parsed+'%'}};
   mk('c-src','doughnut',{labels:d.src.map(s=>s.c),datasets:[{data:d.src.map(s=>s.p),backgroundColor:PAL,borderWidth:2,borderColor:'#fff'}]},
-  {cutout:'58%',plugins:{legend:{position:'bottom',labels:{font:{family:'Inter',size:9},color:'#0A1E1C',boxWidth:8,padding:7}},tooltip:TIP}});
+  {cutout:'58%',plugins:{legend:{position:'bottom',labels:{font:{family:'Inter',size:12},color:'#0A1E1C',boxWidth:8,padding:7}},tooltip:srcTip}});
   const mx=Math.max(...d.src.map(s=>s.p));
   document.getElementById('src-list').innerHTML=d.src.map((s,i)=>`<div class="sri"><div class="sr-rk${i===0?' r1':''}">${i+1}</div><div class="sr-nm">${s.c}</div><div class="sr-bg"><div class="sr-fi" style="width:${s.p/mx*100}%;background:${PAL[i]};"></div></div><div class="sr-pc">${s.p}%</div></div>`).join('');
   const tbl=document.getElementById('hm-tbl');
@@ -874,16 +1097,20 @@ function rDrv(){
   [['c-drv',elD],['c-fear',elF],['c-drv-rad',elR]].forEach(([id])=>{if(charts[id]){charts[id].destroy();delete charts[id];}});
   const plD=dlPlugin();const plF=dlPlugin();
   charts['c-drv']=new Chart(elD.getContext('2d'),{type:'bar',
-    data:{labels:d.drv.map(x=>x.d),datasets:[{label:'% Respondents',data:d.drv.map(x=>x.p),backgroundColor:PAL,borderRadius:8,borderSkipped:false,
-      dl:{fmt:v=>v+'%',outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}}}
+    data:{labels:d.drv.map(x=>x.d),datasets:[{label:'% Respondents',data:d.drv.map(x=>x.p),backgroundColor:PAL,borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>' Respondents: '+ctx.parsed.x+'%'}}},
+      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}}}
   });charts['c-drv'].config.plugins=[plD];charts['c-drv'].update();
   charts['c-fear']=new Chart(elF.getContext('2d'),{type:'bar',
-    data:{labels:d.fear.map(x=>x.f),datasets:[{label:'% Respondents',data:d.fear.map(x=>x.p),backgroundColor:'rgba(0,181,165,.8)',borderRadius:8,borderSkipped:false,
-      dl:{fmt:v=>v+'%',outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}}}
+    data:{labels:d.fear.map(x=>x.f),datasets:[{label:'% Respondents',data:d.fear.map(x=>x.p),backgroundColor:d.fear.map((_,i)=>PAL[(i+4)%PAL.length]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>' Respondents: '+ctx.parsed.x+'%'}}},
+      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}}}
   });charts['c-fear'].config.plugins=[plF];charts['c-fear'].update();
   mk('c-drv-rad','radar',{
     labels:d.drv.slice(0,6).map(x=>x.d.length>15?x.d.slice(0,15)+'…':x.d),
@@ -891,7 +1118,18 @@ function rDrv(){
       {label:jrn==='ref'?'Purchase Drivers':'Trust Drivers',data:d.drv.slice(0,6).map(x=>x.p),borderColor:'#2D8A3E',backgroundColor:'rgba(45,138,62,.1)',pointBackgroundColor:'#2D8A3E',borderWidth:2.5,pointRadius:4},
       {label:jrn==='ref'?'Hesitations':'Fears',data:d.fear.slice(0,6).map(x=>x.p),borderColor:'#00B5A5',backgroundColor:'rgba(0,181,165,.08)',pointBackgroundColor:'#00B5A5',borderWidth:2.5,pointRadius:4}
     ]
-  },{plugins:{legend:LEG,tooltip:TIP},scales:{r:{beginAtZero:true,max:100,ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:8}},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{font:{family:'Inter',size:10},color:'#1A3D38'}}}});
+  },{plugins:{legend:LEG,tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.r+'/100'}}},scales:{r:{beginAtZero:true,max:100,ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:12}},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{font:{family:'Inter',size:12},color:'#1A3D38'}}}});
+  const _ci_drv=document.getElementById('ci-drv');
+  if(_ci_drv&&d.drv.length){
+    const top3=d.drv.slice(0,3);
+    const isRef=jrn==='ref';
+    _ci_drv.innerHTML=`<span class='ci-label'>📊 What this shows</span>Top ${isRef?'purchase':'trust'} drivers for this segment. <strong>#1: ${top3[0].d} (${top3[0].p}%)</strong> · #2: ${top3[1].d} (${top3[1].p}%) · #3: ${top3[2].d} (${top3[2].p}%). These are the rational triggers that move consumers toward choosing a platform — Cashify should lead messaging with its top-matching strengths.`;
+  }
+  const _ci_fear=document.getElementById('ci-fear');
+  if(_ci_fear&&d.fear.length){
+    const top=d.fear[0];
+    _ci_fear.innerHTML=`<span class='ci-label'>📊 What this shows</span>Biggest barrier: <strong>${top.f} (${top.p}%)</strong>. These hesitations actively stop consumers from buying/selling. Each percentage point here represents a conversion blocker — Cashify's certified quality and instant-payment guarantees directly counter the top fears. Base: n=${d.n.toLocaleString()}.`;
+  }
 }
 
 
@@ -899,78 +1137,124 @@ function rDrv(){
 function rChoiceDrivers(){
   const d=gd();
   const jLabel=jrn==='ref'?'Refurbished':'Buyback';
-  document.getElementById('q20-lbl').textContent='Q20 — Why Chose Cashify ('+jLabel+')';
-  document.getElementById('q21a-lbl').textContent='Q21A — Why Competitor Was Chosen ('+jLabel+')';
+  const lbl20=document.getElementById('q20-lbl');if(lbl20)lbl20.textContent='Q20 — Why Chose Cashify ('+jLabel+')';
+  const lbl21=document.getElementById('q21a-lbl');if(lbl21)lbl21.textContent='Q21A — Why Competitor Was Chosen ('+jLabel+')';
+  if(!d.q20||!d.q20.length||!document.getElementById('c-q20'))return;
   ['c-q20','c-q21a','c-drvcmp'].forEach(id=>{if(charts[id]){charts[id].destroy();delete charts[id];}});
   const plQ=dlPlugin();const plA=dlPlugin();const plC=dlPlugin();
+  // Sort q20: lower rank value = more important; show as sorted descending by value
+  const q20s=[...d.q20].sort((a,b)=>b.p-a.p);
+  const q20Max=Math.ceil(Math.max(...q20s.map(x=>x.p))*1.15*10)/10||2;
+  const q20IsRank=q20Max<10; // detect rank (0-5) vs percent (0-100)
+  const q20Fmt=q20IsRank?v=>v.toFixed(2)+' avg rank':v=>v+'%';
   charts['c-q20']=new Chart(document.getElementById('c-q20').getContext('2d'),{type:'bar',
-    data:{labels:d.q20.map(x=>x.r),datasets:[{label:'% Cashify Users',data:d.q20.map(x=>x.p),backgroundColor:PAL,borderRadius:8,borderSkipped:false,
-      dl:{fmt:v=>v+'%',outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}}}
+    data:{labels:q20s.map(x=>x.r),datasets:[{label:q20IsRank?'Avg Rank Score':'% Cashify Users',data:q20s.map(x=>x.p),backgroundColor:q20s.map((_,i)=>PAL[i%PAL.length]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>q20IsRank?v.toFixed(2):v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.x+(q20IsRank?'':' %')}}},
+      scales:{
+        x:{max:q20Max,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>q20IsRank?v.toFixed(1):v+'%'}},
+        y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}
+      }}
   });charts['c-q20'].config.plugins=[plQ];charts['c-q20'].update();
+  const q21as=[...d.q21a].sort((a,b)=>b.p-a.p);
+  const q21aMax=Math.ceil(Math.max(...q21as.map(x=>x.p))*1.15*10)/10||2;
+  const q21aIsRank=q21aMax<10;
   charts['c-q21a']=new Chart(document.getElementById('c-q21a').getContext('2d'),{type:'bar',
-    data:{labels:d.q21a.map(x=>x.r),datasets:[{label:'% Choosing Competitor',data:d.q21a.map(x=>x.p),backgroundColor:'rgba(45,138,62,.80)',borderRadius:8,borderSkipped:false,
-      dl:{fmt:v=>v+'%',outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}}}
+    data:{labels:q21as.map(x=>x.r),datasets:[{label:q21aIsRank?'Avg Rank Score':'% Choosing Competitor',data:q21as.map(x=>x.p),backgroundColor:q21as.map((_,i)=>PAL[(i+3)%PAL.length]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>q21aIsRank?v.toFixed(2):v+'%',sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.x+(q21aIsRank?'':' %')}}},
+      scales:{
+        x:{max:q21aMax,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>q21aIsRank?v.toFixed(1):v+'%'}},
+        y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}
+      }}
   });charts['c-q21a'].config.plugins=[plA];charts['c-q21a'].update();
-  // Head-to-head comparison (top 5 overlap)
-  const labels5=d.q20.slice(0,5).map(x=>x.r);
-  const c5=d.q20.slice(0,5).map(x=>x.p);
-  const maxR=d.q21a.length;
-  const r5=labels5.map(l=>{const idx=d.q21a.findIndex(x=>x.r===l);return idx>=0?d.q21a[idx].p:d.q21a[Math.min(maxR-1,labels5.indexOf(l))].p;});
+  // Head-to-head: top 5 from sorted q20 vs matching q21a items
+  const top5Labels=q20s.slice(0,5).map(x=>x.r);
+  const top5C=q20s.slice(0,5).map(x=>x.p);
+  const top5R=top5Labels.map(l=>{const found=d.q21a.find(x=>x.r===l);return found?found.p:(d.q21a[top5Labels.indexOf(l)]||{p:0}).p;});
+  const cmpMax=Math.ceil(Math.max(...top5C,...top5R)*1.2*10)/10||2;
+  const cmpIsRank=cmpMax<10;
   charts['c-drvcmp']=new Chart(document.getElementById('c-drvcmp').getContext('2d'),{type:'bar',
-    data:{labels:labels5,datasets:[
-      {label:'Why Chose Cashify',data:c5,backgroundColor:'rgba(0,181,165,.85)',borderRadius:6,dl:{fmt:v=>v+'%',outside:false,sz:8,col:'#fff'}},
-      {label:'Why Chose Competitor',data:d.q21a.slice(0,5).map(x=>x.p),backgroundColor:'rgba(45,138,62,.75)',borderRadius:6,dl:{fmt:v=>v+'%',outside:false,sz:8,col:'#fff'}}
+    data:{labels:top5Labels,datasets:[
+      {label:'Why Chose Cashify',data:top5C,backgroundColor:'rgba(0,122,110,.88)',borderRadius:4,dl:{fmt:v=>cmpIsRank?v.toFixed(2):v+'%',sz:11,col:'#fff'}},
+      {label:'Why Chose Competitor',data:top5R,backgroundColor:'rgba(45,138,62,.80)',borderRadius:4,dl:{fmt:v=>cmpIsRank?v.toFixed(2):v+'%',sz:11,col:'#fff'}}
     ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:TIP},
-      scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:9}}},y:{max:100,ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}}}}
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{...LEG,position:'top'},tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.y+(cmpIsRank?' (rank)':' %')}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{family:'Inter',size:12},maxRotation:30}},
+        y:{max:cmpMax,ticks:{font:{family:'Inter',size:12},callback:v=>cmpIsRank?v.toFixed(1):v+'%'},grid:{color:'rgba(0,0,0,.04)'}}
+      }}
   });charts['c-drvcmp'].config.plugins=[plC];charts['c-drvcmp'].update();
-  document.getElementById('drv-ins').innerHTML=`<div class="tab-ins">🏅 <strong>#1 Cashify Reason:</strong> ${d.q20[0].r} (${d.q20[0].p}%) — lead with this in every touchpoint.</div><div class="tab-ins">⚠️ <strong>Competitor Edge:</strong> ${d.q21a[0].r} (${d.q21a[0].p}%) — top reason users bypass Cashify.</div><div class="tab-ins">💡 Gap narrows at familiarity — conversion investment is critical.</div>`;
+  const _di=document.getElementById('drv-ins');if(_di)_di.innerHTML=`<div class="tab-ins">🏅 <strong>#1 Cashify Reason:</strong> ${d.q20[0].r} (${d.q20[0].p}%) — lead with this in every touchpoint.</div><div class="tab-ins">⚠️ <strong>Competitor Edge:</strong> ${d.q21a[0].r} (${d.q21a[0].p}%) — top reason users bypass Cashify.</div><div class="tab-ins">💡 Gap narrows at familiarity — conversion investment is critical.</div>`;
 }
 
 // ---- BARRIERS (Q21B) ----
 function rBarriers(){
   const d=gd();
   const jLabel=jrn==='ref'?'Refurbished':'Buyback';
-  document.getElementById('bar-lbl').textContent='Q21B — Barriers to Cashify ('+jLabel+')';
+  const barlbl=document.getElementById('bar-lbl');if(barlbl)barlbl.textContent='Q21B — Barriers to Cashify ('+jLabel+')';
+  if(!d.q21b||!d.q21b.length||!document.getElementById('c-bar'))return;
   ['c-bar','c-bar-rad'].forEach(id=>{if(charts[id]){charts[id].destroy();delete charts[id];}});
   const plB=dlPlugin();const plR=dlPlugin();
+  const barSorted=[...d.q21b].sort((a,b)=>b.p-a.p);
+  const barMax=Math.ceil(Math.max(...barSorted.map(x=>x.p))*1.2*10)/10||2;
+  const barIsRank=barMax<10;
+  const barFmt=v=>barIsRank?v.toFixed(2):v+'%';
   charts['c-bar']=new Chart(document.getElementById('c-bar').getContext('2d'),{type:'bar',
-    data:{labels:d.q21b.map(x=>x.r),datasets:[{label:'% Not Choosing Cashify',data:d.q21b.map(x=>x.p),backgroundColor:d.q21b.map((_,i)=>i===0?'#E8591A':PAL[i]),borderRadius:8,borderSkipped:false,
-      dl:{fmt:v=>v+'%',outside:true,sz:9,col:'#1A3D38'}}]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:TIP},
-      scales:{x:{max:60,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:9},callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}}}
+    data:{labels:barSorted.map(x=>x.r),datasets:[{label:barIsRank?'Avg Barrier Rank':'% Not Choosing Cashify',data:barSorted.map(x=>x.p),backgroundColor:barSorted.map((_,i)=>i===0?'#E8591A':PAL[i%PAL.length]),borderRadius:4,borderSkipped:false,
+      dl:{fmt:v=>barFmt(v),sz:12,col:'#fff'}}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+      layout:{padding:{right:8}},
+      plugins:{legend:{display:false},tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+barFmt(ctx.parsed.x)}}},
+      scales:{
+        x:{max:barMax,grid:{color:'rgba(0,0,0,.04)'},ticks:{font:{family:'Inter',size:12},callback:v=>barFmt(v)}},
+        y:{grid:{display:false},ticks:{font:{family:'Inter',size:12},crossAlign:'far'}}
+      }}
   });charts['c-bar'].config.plugins=[plB];charts['c-bar'].update();
   charts['c-bar-rad']=new Chart(document.getElementById('c-bar-rad').getContext('2d'),{type:'radar',
     data:{labels:d.q21b.map(x=>x.r.length>20?x.r.slice(0,20)+'…':x.r),
       datasets:[{label:'Barrier Intensity',data:d.q21b.map(x=>x.p),borderColor:'#E8591A',backgroundColor:'rgba(232,89,26,.10)',pointBackgroundColor:'#E8591A',borderWidth:2.5,pointRadius:4}]
     },
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:TIP},
-      scales:{r:{beginAtZero:true,max:60,ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:8}},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{font:{family:'Inter',size:10},color:'#1A3D38'}}}}
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:LEG,tooltip:{...TIP,callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.r.toFixed(2)}}},
+      scales:{r:{beginAtZero:true,max:barMax,ticks:{backdropColor:'transparent',color:'#0A1E1C',font:{family:'Inter',size:12},callback:v=>barIsRank?v.toFixed(1):v+'%'},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{font:{family:'Inter',size:12},color:'#1A3D38'}}}}
   });charts['c-bar-rad'].config.plugins=[plR];charts['c-bar-rad'].update();
   // Summary table
   const tableHtml=`<table class="fn-tbl"><thead><tr><th>#</th><th style="text-align:left">Barrier</th><th>% Citing</th><th>Severity</th></tr></thead><tbody>${
     d.q21b.map((x,i)=>{
-      const sev=x.p>=35?'⚠️ High':x.p>=25?'⚡ Medium':'✅ Low';
-      const sevCol=x.p>=35?'#C0392B':x.p>=25?'#E88A1A':'#27AE60';
-      const bar=`<div style="background:#e0f7f5;height:7px;border-radius:3px;width:160px;display:inline-block;vertical-align:middle;overflow:hidden;"><div style="height:100%;width:${x.p/60*100}%;background:#00B5A5;border-radius:3px;"></div></div>`;
-      return`<tr><td style="font-size:11px;color:#4A8880">${i+1}</td><td style="text-align:left;font-weight:600;font-size:12px">${x.r}</td><td><span style="font-weight:800;font-size:14px;color:#1A3D38">${x.p}%</span>&nbsp;${bar}</td><td><span style="font-size:11px;font-weight:700;color:${sevCol}">${sev}</span></td></tr>`;
+      const sevThreshHi=barIsRank?1.5:35, sevThreshMid=barIsRank?1.2:25;
+      const sev=x.p>=sevThreshHi?'⚠️ High':x.p>=sevThreshMid?'⚡ Medium':'✅ Low';
+      const sevCol=x.p>=sevThreshHi?'#C0392B':x.p>=sevThreshMid?'#E88A1A':'#27AE60';
+      const barVal=barIsRank?x.p.toFixed(2):x.p+'%';
+      const barPct=barIsRank?(x.p/barMax*100):(x.p/60*100);
+      const bar=`<div style="background:#e0f7f5;height:7px;border-radius:3px;width:160px;display:inline-block;vertical-align:middle;overflow:hidden;"><div style="height:100%;width:${barPct}%;background:#00B5A5;border-radius:3px;"></div></div>`;
+      return`<tr><td style="font-size:11px;color:#4A8880">${i+1}</td><td style="text-align:left;font-weight:600;font-size:12px">${x.r}</td><td><span style="font-weight:800;font-size:14px;color:#1A3D38">${barVal}</span>&nbsp;${bar}</td><td><span style="font-size:11px;font-weight:700;color:${sevCol}">${sev}</span></td></tr>`;
     }).join('')
   }</tbody></table>`;
-  document.getElementById('bar-tbl-wrap').innerHTML=tableHtml;
+  const _btw=document.getElementById('bar-tbl-wrap');if(_btw)_btw.innerHTML=tableHtml;
 }
 
 // ---- RENDER ALL ----
 function renderAll(){
-  rSC();rRadar();rCity();rAge();rIncome();
-  rTOM();rAided();rAwCmp();
-  rPSel();
-  rNPS();rCons();rSrc();rDrv();
-  if(document.getElementById("tab-choicedrivers").classList.contains("active"))rChoiceDrivers();
-  if(document.getElementById("tab-barriers").classList.contains("active"))rBarriers();
+  try{rSC();}catch(e){console.warn('rSC',e);}
+  try{rRadar();}catch(e){console.warn('rRadar',e);}
+  try{rCity();}catch(e){console.warn('rCity',e);}
+  try{rAge();}catch(e){console.warn('rAge',e);}
+  try{rIncome();}catch(e){console.warn('rIncome',e);}
+  try{rTOM();}catch(e){console.warn('rTOM',e);}
+  try{rAided();}catch(e){console.warn('rAided',e);}
+  try{rAwCmp();}catch(e){console.warn('rAwCmp',e);}
+  try{rPSel();}catch(e){console.warn('rPSel',e);}
+  try{rNPS();}catch(e){console.warn('rNPS',e);}
+  try{rCons();}catch(e){console.warn('rCons',e);}
+  try{rSrc();}catch(e){console.warn('rSrc',e);}
+  try{rDrv();}catch(e){console.warn('rDrv',e);}
+  try{rChoiceDrivers();}catch(e){console.warn('rChoiceDrivers',e);}
+  try{rBarriers();}catch(e){console.warn('rBarriers',e);}
 }
 
 window.addEventListener('resize',()=>{
@@ -1018,13 +1302,25 @@ Chart.register({
 });
 
 // ---- CONTROLS ----
+function resetAll(){
+  fCity='all';fGender='all';fAge='all';fInc='all';
+  selP=[];selPAll=true;
+  document.querySelectorAll('.chip').forEach(c=>{
+    c.classList.remove('active');
+    if(c.dataset.v==='all')c.classList.add('active');
+  });
+  renderAll();
+}
 function setJ(j,btn){
   jrn=j;
+  fCity='all';fGender='all';fAge='all';fInc='all';
+  selP=[];selPAll=true;  // reset platform selection for new journey
   document.querySelectorAll('.jb').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  const d=gd();
-  const el=document.getElementById('hdr-n');
-  if(el)el.textContent=d?d.n.toLocaleString():'—';
+  document.querySelectorAll('.chip').forEach(c=>{c.classList.remove('active');if(c.dataset.v==='all')c.classList.add('active');});
+  const jlbl=document.getElementById('hdr-jrn-lbl');
+  if(jlbl)jlbl.textContent=(jrn==='ref'?'Refurb':'Buyback')+' Filtered n';
+  updateHeaderTotals();
   renderAll();
 }
 function setT(tab,btn){document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+tab).classList.add('active');if(tab==='health'){setTimeout(()=>{rSlopeChart();rFunnelCards();},30);}else if(tab==='choicedrivers'){setTimeout(rChoiceDrivers,30);}else if(tab==='barriers'){setTimeout(rBarriers,30);}}
@@ -1038,14 +1334,34 @@ function tc(chip){
   else if(f==='gender')fGender=v;
   else if(f==='age')fAge=v;
   else if(f==='inc')fInc=v;
-  // Update sample count in header
-  const d=gd();
-  const el=document.getElementById('hdr-n');
-  if(el)el.textContent=d?d.n.toLocaleString():'—';
   renderAll();
 }
 
-window.addEventListener('load',renderAll);
+function updateHeaderTotals(){
+  const refBase=D['ref_all_all_all_all']?D['ref_all_all_all_all'].n:1632;
+  const bbBase=D['bb_all_all_all_all']?D['bb_all_all_all_all'].n:1492;
+  const elRef=document.getElementById('hdr-ref-n');
+  const elBb=document.getElementById('hdr-bb-n');
+  if(elRef)elRef.textContent=refBase.toLocaleString();
+  if(elBb)elBb.textContent=bbBase.toLocaleString();
+}
+window.addEventListener('load',()=>{
+  updateHeaderTotals();
+  function calcStickyTop(){
+    const hdr=document.querySelector('.hdr');
+    const fbar=document.querySelector('.fbar');
+    const hdrH=hdr?hdr.offsetHeight:58;
+    const fbarH=fbar?fbar.offsetHeight:72;
+    document.documentElement.style.setProperty('--tabs-top',(hdrH+fbarH)+'px');
+    // Update fbar sticky top
+    if(fbar)fbar.style.top=hdrH+'px';
+  }
+  setTimeout(calcStickyTop,50);
+  window.addEventListener('resize',calcStickyTop);
+  renderAll();
+  // Re-calc after charts render (they can shift layout)
+  setTimeout(calcStickyTop,800);
+});
 </script>
 </body>
 </html>
